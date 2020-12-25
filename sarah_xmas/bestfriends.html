@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Best Friends</title>
+
+<style>
+  body {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 8px;
+  }
+
+  .cursive { font-family: Brush Script MT, Brush Script Std, cursive; }
+
+  @media (prefers-color-scheme: dark) {
+    html { background: #1c1c1c; color: white; }
+    a { color: #6bf; }
+    a:visited { color: #f8f; }
+    a:active { color: red; }
+  }
+</style>
+
+<script type=text/javascript>
+  String.prototype.hashCode = function() {
+      var hash = 0;
+      if (this.length == 0) {
+          return hash;
+      }
+      for (var i = 0; i < this.length; i++) {
+          var char = this.charCodeAt(i);
+          hash = ((hash<<5)-hash)+char;
+          hash = hash & hash; // Convert to 32bit integer
+      }
+      return hash;
+  }
+  function processAnswer() {
+    var ans = document.getElementById('answer').value.trim().toUpperCase();
+    var hash = ans.hashCode();
+    if(hash == -1881579439) {
+      alert('Correct!')
+    }
+    else{
+      alert(ans + ' is incorrect.');
+    }
+  }
+</script>
+
+<h1 id="top">Best Friends</h1>
+
+
+<p><i>Over a pint of cold dark beer, a rough gang challenges you and your friends to several odd competitions. The locals say that they’re the best in the world and that you’re barking mad to take them on, but they haven’t seen what your friends can unleash.</i></p>
+
+<p>Challenge 1: Who can make it furthest with this revamped ironing board?</p>
+<img src="xword_images/1.png">
+
+<p>Challenge 2: Which ballboy can stay ready, in this match between servers who always fault?</p>
+<img src="xword_images/2.png">
+
+<p>Challenge 3: Who will get the peanut butter jar the cleanest?</p>
+<img src="xword_images/3.png">
+
+<p>Challenge 4: Who will be faster in Total Wipeout Sweepout?</p>
+<img src="xword_images/4.png">
+
+<p>Challenge 5: Who will win at reaching the cookie jar?</p>
+<img src="xword_images/5.png">
+
+<p>Challenge 6: Who can recover this diamond ring from the ocean floor?</p>
+<img src="xword_images/6.png">
+
+<form onsubmit="return processAnswer()">
+<label for="fname">Answer:</label><br>
+<input type="text" id="answer" name="answer" value=""><br>
+<input type="submit" value="Submit">
+</form>
