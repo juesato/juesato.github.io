@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
+</head>
 <title>Best Friends</title>
 
 <style>
@@ -37,11 +41,35 @@
       }
       return hash;
   }
+  var form_html = `<p style="margin-bottom: 20px">Great job! Way to show that gang that your friends don't own the RECORD for nothing! They're not done yet though.</p>
+<p>Bonus challenge: Peanut catching competition</p>
+  <form onsubmit="return processSecondAnswer()" style="margin-top: 20px">
+<label for="fname">Answer:</label><br>
+<input type="text" id="answer2" name="answer" value=""><br>
+<input type="submit" value="Submit" style="margin-top: 4px">
+</form>`
+  $('document').ready(function() {
+    $("#answer_form").submit(function(e) {
+      e.preventDefault();
+      processAnswer();
+    });
+  });
   function processAnswer() {
     var ans = document.getElementById('answer').value.trim().toUpperCase();
     var hash = ans.hashCode();
     if(hash == -1881579439) {
-      alert('Correct!')
+      $("#hiddendiv").html(form_html);
+      window.scrollTo(0,document.body.scrollHeight);
+    }
+    else{
+      alert(ans + ' is incorrect.');
+    }
+  }
+  function processSecondAnswer() {
+    var ans = document.getElementById('answer2').value.trim().toUpperCase();
+    var hash = ans.hashCode();
+    if(hash == 2123524031) {
+      alert("Well done! Yes, HAGRID is the one you seek. Now seek the place where you first met him.")
     }
     else{
       alert(ans + ' is incorrect.');
@@ -72,8 +100,12 @@
 <p>Challenge 6: Find the sunken pirate ship</p>
 <img src="xword_images/6.png">
 
-<form onsubmit="return processAnswer()">
+<!-- onsubmit="return processAnswer()" -->
+<form id="answer_form">
 <label for="fname">Answer:</label><br>
 <input type="text" id="answer" name="answer" value=""><br>
-<input type="submit" value="Submit">
+<input type="submit" value="Submit" style="margin-top: 4px">
 </form>
+
+<div id="hiddendiv">
+</div>
