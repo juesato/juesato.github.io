@@ -1,0 +1,1024 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single-sentence Fact-checking Golden Demonstrations</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/5.1.1/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            line-height: 1.4;
+            background-color: #f9f9f9;
+        }
+        #content {
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1, h2, h3 {
+            color: #333366;
+        }
+        pre, code {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+    <!-- Markdown content will be inserted here -->
+</div>
+
+<script>
+function formatted(text) {
+    return marked.parse(text, {breaks: true});
+}
+
+// Replace this markdownString with your actual Markdown content
+const markdownString = `# Example 1
+
+**User**: Fact-check this claim in the context of the following conversation.
+
+<details><summary>Conversation (Click to expand)</summary>
+User: What is the difference between parametric and nonparametric correlation?
+
+Model: Parametric correlation and nonparametric correlation are two different ways of measuring the relationship between two variables.
+
+Parametric correlation assumes that the data is normally distributed and that the relationship between the two variables is linear. Nonparametric correlation does not make any assumptions about the distribution of the data or the shape of the relationship between the two variables.
+
+Parametric correlation is typically used when the data is normally distributed and the relationship between the two variables is linear. Nonparametric correlation is typically used when the data is not normally distributed or the relationship between the two variables is not linear.
+
+The following table summarizes the key differences between parametric and nonparametric correlation:
+
+| Feature | Parametric correlation | Nonparametric correlation |
+|---|---|---|
+| Assumptions | Data is normally distributed and the relationship between the two variables is linear | No assumptions about the distribution of the data or the shape of the relationship between the two variables |
+| Formula | Pearson's correlation coefficient | Spearman's rank correlation coefficient, Kendall's tau |
+| Interpretation | The strength and direction of the linear relationship between the two variables | The strength and direction of the monotonic relationship between the two variables |
+
+Here are some examples of when you would use parametric and nonparametric correlation:
+
+* **Parametric correlation:** You would use parametric correlation if you have data that is normally distributed and you want to measure the strength and direction of the linear relationship between two variables. For example, you could use parametric correlation to measure the relationship between the height and weight of a group of adults.
+* **Nonparametric correlation:** You would use nonparametric correlation if you have data that is not normally distributed or if you want to measure the strength and direction of a monotonic relationship between two variables. For example, you could use nonparametric correlation to measure the relationship between the number of years of education and the income of a group of people.
+
+In general, parametric correlation is more powerful than nonparametric correlation. However, nonparametric correlation is more robust to violations of the assumptions of parametric correlation. Therefore, you should choose the type of correlation that is most appropriate for your data and your research goals.
+</details>
+
+Fact-check this claim: Nonparametric correlation does not make any assumptions about the distribution of the data or the shape of the relationship between the two variables.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: nonparametric correlation
+
+**Search Result**:
+  [3] Nonparametric Correlation Estimates - IBM
+  URL: https://www.ibm.com/docs/en/spss-statistics/25.0.0?topic=efficiency-nonparametric-correlation-estimates#:~:text=The%20Spearman's%20rho%20and%20Kendall's,Click%20OK.
+  The Spearman's rho and Kendall's tau-b statistics measure the rank-order association between two scale or ordinal variables. They work regardless of the distributions of the variables. To obtain an analysis using Spearman's rho, recall the Bivariate Correlations dialog box. Select Sales in thousands as an analysis variable. Deselect Pearson and select Spearman. Click OK.
+
+  [2] Assumptions in Nonparametric Correlations - Wiley Online Library
+  URL: https://onlinelibrary.wiley.com/doi/10.1002/9781119528388.ch6
+  Nonparametric tests are generally used where the data does not follow a normal distribution. Spearman rank-order correlation is a nonparametric statistical technique for measuring the relationship between two ordinal variables or rank-ordinal correlation.
+
+  [1] 
+  URL: https://onlinelibrary.wiley.com/doi/10.1002/9781119528388.ch6#:~:text=Nonparametric%20tests%20are%20generally%20used,variables%20or%20rank%2Dordinal%20correlation.
+  Assumptions in Nonparametric Correlations
+
+Nonparametric tests are generally used where the data does not follow a normal distribution. Spearman rank-order correlation is a nonparametric statistical technique for measuring the relationship between two ordinal variables or rank-ordinal correlation.
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+The ibm.com page looks very relevant. Let's zoom into Kendall's tau and Spearman's rho.
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: Kendall's tau assumptions
+
+**Search Result**:
+  [3] Kendall Rank Correlation Explained. | by Joseph Magiya | Towards Data Science
+  URL: https://towardsdatascience.com/kendall-rank-correlation-explained-dee01d99c535#:~:text=Also%20commonly%20known%20as%20%E2%80%9CKendall's,it%20is%20ranked%20by%20quantities.
+  Also commonly known as “Kendall's tau coefficient”. Kendall's Tau coefficient and Spearman's rank correlation coefficient assess statistical associations based on the ranks of the data. Kendall rank correlation (non-parametric) is an alternative to Pearson's correlation (parametric) when the data you're working with has failed one or more assumptions of the test. This is also the best alternative to Spearman correlation (non-parametric) when your sample size is small and has many tied ranks. Kendall rank correlation is used to test the similarities in the ordering of data when it is ranked by quantities.
+
+  [2] Kendall's Tau - StatsTest.com
+  URL: https://www.statstest.com/kendalls-tau/
+  Assumptions for Kendall's Tau. ... Continuous or Ordinal. The variables that you care about must be continuous or ordinal. Continuous means that the variable can take on any reasonable value. ... Monotonicity. Your two variables should have a monotonic relationship. This means that the direction of the relationship between the variables is consistent. ... Relationship. You are looking for a statistical test to look at how two variables are related. ... Continuous with Outliers or Ordinal. Your variables of interest must be either continuous or ordinal. ... Two Variables. Kendall's Tau can only be used to compare two variables.
+Every statistical method has assumptions. Assumptions mean that your data must satisfy certain properties in order for statistical method results to be accurate. The assumptions for Kendall's Tau include: Continuous or ordinal. Monotonicity.
+
+  [1] Kendall's Tau-b using SPSS Statistics - A How-To Statistical Guide by Laerd Statistics
+  URL: https://statistics.laerd.com/spss-tutorials/kendalls-tau-b-using-spss-statistics.php
+  Assumptions. ... Assumption #1: Your two variables should be measured on an ordinal or continuous scale. Examples of ordinal variables include Likert scales (e.g., a 7-point scale from strongly agree through to strongly disagree), amongst other ways of ranking categories (e.g., a 5-point scale explaining how much a customer liked a product, ranging from "Not very much" to "Yes, a lot"). ... Assumption #2: Kendall's tau-b determines whether there is a monotonic relationship between your two variables.
+Interpreting the Results for Kendall's Tau-b SPSS Statistics generates one main table for the Kendall's tau-b procedure that you ran in the previous section. If your data passed assumption #2 (i.e., there is a monotonic relationship between your two variables), which we explained earlier in the Assumptions section, you will only need to interpret this one table. However, since you should have tested your data for this assumption, you will also need to interpret the SPSS Statistics output that was produced when you tested for it (i.e., your scatterplot results).
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+All three sources suggest that Kendall's tau assumes that the two variables have a monotonic relationship, which contradicts the statement.
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: Spearman's rho assumptions
+
+**Search Result**:
+  [3] Spearman's Rho - StatsTest.com
+  URL: https://www.statstest.com/spearmans-rho/
+  Assumptions for Spearman's Rho. ... Continuous or Ordinal. The variables that you care about must be continuous or ordinal. Continuous means that the variable can take on any reasonable value. ... Monotonicity. Your two variables should have a monotonic relationship. This means that the direction of the relationship between the variables is consistent. ... Relationship. You are looking for a statistical test to look at how two variables are related. ... Continuous with Outliers or Ordinal. Your variable of interest must be either continuous or ordinal. ... Two Variables. Spearman's Rho can only be used to compare two variables.
+Every statistical method has assumptions. Assumptions mean that your data must satisfy certain properties in order for statistical method results to be accurate. The assumptions for Spearman's Rho include: Continuous or ordinal. Monotonicity.
+
+  [2] Spearman's Rank Order Correlation using SPSS Statistics - A How-To Statistical Guide by Laerd Statistics
+  URL: https://statistics.laerd.com/spss-tutorials/spearmans-rank-order-correlation-using-spss-statistics.php
+  Assumptions. ... Assumption #1: Your two variables should be measured on an ordinal, interval or ratio scale. Examples of ordinal variables include Likert scales (e.g., a 7-point scale from "strongly agree" through to "strongly disagree"), amongst other ways of ranking categories (e.g., a 3-pont scale explaining how much a customer liked a product, ranging from "Not very much", to "It is OK", to "Yes, a lot"). ... Assumption #2: Your two variables represent paired observations. ... Assumption #3: There is a monotonic relationship between the two variables.
+Note: Spearman's correlation determines the degree to which a relationship is monotonic. Put another way, it determines whether there is a monotonic component of association between two continuous or ordinal variables. As such, monotonicity is not actually an assumption of Spearman's correlation. However, you would not normally want to pursue a Spearman's correlation to determine the strength and direction of a monotonic relationship when you already know the relationship between your two variables is not monotonic.
+
+  [1] 
+  URL: https://statistics.laerd.com/spss-tutorials/spearmans-rank-order-correlation-using-spss-statistics.php
+  These three assumptions are:
+
+Assumption #1: Your two variables should be measured on an ordinal, interval or ratio scale.
+
+Assumption #2: Your two variables represent paired observations.
+
+Assumption #3: There is a monotonic relationship between the two variables.
+ 
+</details>
+
+Let's list the claims:
+
+1. Nonparametric correlation does not make any assumptions about the distribution of the data.
+2. Nonparametric correlation does not make any assumptions about the shape of the relationship between the two variables.
+
+Claim 2 is incorrect. Kendall's tau and Spearman's rho are common nonparametric correlation measure, but they do assume a monotonic relationship between the two variables. From [ibm.com]( https://www.ibm.com/docs/en/spss-statistics/25.0.0?topic=efficiency-nonparametric-correlation-estimates#:~:text=The%20Spearman's%20rho%20and%20Kendall's,Click%20OK):
+
+> The Spearman's rho and Kendall's tau-b statistics measure the rank-order association between two scale or ordinal variables.
+
+Kendall's tau assumes the relationship between the two variables is monotonic. From [statstest.com](https://www.statstest.com/kendalls-tau/#:~:text=Assumptions%20for%20Kendall's%20Tau&text=Assumptions%20mean%20that%20your%20data,Monotonicity):
+> The assumptions for Kendall's Tau include: Continuous or ordinal. Monotonicity.
+
+This also applies to Spearman's rho. From [statistics.laerd.com](https://statistics.laerd.com/spss-tutorials/spearmans-rank-order-correlation-using-spss-statistics.php):
+> Assumption #3: There is a monotonic relationship between the two variables.
+
+Overall rating: Inaccurate
+
+# Example 2
+
+**User**: Fact-check this claim in the context of the following conversation.
+
+<details><summary>Conversation (Click to expand)</summary>
+User: Text: Fiscal policy and monetary policy are two distinct tools used by governments and central banks to manage the economy.
+
+Fiscal policy refers to the use of government spending and taxation to influence the overall level of economic activity. Governments implement fiscal policy measures by adjusting tax rates, government spending on goods and services, and transfer payments. Expansionary fiscal policy, such as increasing government spending or reducing taxes, aims to stimulate economic growth and increase aggregate demand. On the other hand, contractionary fiscal policy, involving higher taxes or reduced government spending, seeks to slow down the economy and curb inflation.
+
+Monetary policy, on the other hand, involves the management of the money supply and interest rates by a central bank. Central banks use monetary policy tools, such as open market operations, reserve requirements, and discount rates, to influence the availability and cost of credit in the economy. Expansionary monetary policy, like lowering interest rates or increasing the money supply, stimulates borrowing and investment, promoting economic growth. Conversely, contractionary monetary policy, including raising interest rates or reducing the money supply, aims to cool down the economy and control inflation.
+
+Both fiscal and monetary policies play crucial roles in managing the economy. Fiscal policy directly affects government spending and taxation, impacting the aggregate demand and fiscal balance. Monetary policy, by influencing the cost and availability of credit, affects the borrowing costs, investment decisions, and ultimately, aggregate demand. The effectiveness of these policies depends on various factors such as the state of the economy, prevailing inflationary pressures, and policy coordination between fiscal and monetary authorities.
+
+Explain the difference between fiscal policy and monetary policy, and their respective roles in managing the economy.
+Model:  Fiscal policy and monetary policy are two distinct tools used by governments and central banks to manage the economy.
+
+Fiscal policy refers to the use of government spending and taxation to influence the overall level of economic activity. Governments implement fiscal policy measures by adjusting tax rates, government spending on goods and services, and transfer payments. Expansionary fiscal policy, such as increasing government spending or reducing taxes, aims to stimulate economic growth and increase aggregate demand. On the other hand, contractionary fiscal policy, involving higher taxes or reduced government spending, seeks to slow down the economy and curb inflation.
+
+Monetary policy, on the other hand, involves the management of the money supply and interest rates by a central bank. Central banks use monetary policy tools, such as open market operations, reserve requirements, and discount rates, to influence the availability and cost of credit in the economy. Expansionary monetary policy, like lowering interest rates or increasing the money supply, stimulates borrowing and investment, promoting economic growth. Conversely, contractionary monetary policy, including raising interest rates or reducing the money supply, aims to cool down the economy and control inflation.
+
+Both fiscal and monetary policies play crucial roles in managing the economy. Fiscal policy directly affects government spending and taxation, impacting the aggregate demand and fiscal balance. Monetary policy, by influencing the cost and availability of credit, affects the borrowing costs, investment decisions, and ultimately, aggregate demand. The effectiveness of these policies depends on various factors such as the state of the economy, prevailing inflationary pressures, and policy coordination between fiscal and monetary authorities.
+</details>
+
+Fact-check this claim: On the other hand, contractionary fiscal policy, involving higher taxes or reduced government spending, seeks to slow down the economy and curb inflation.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: contractionary fiscal policy
+
+**Search Result**:
+  [3] Fiscal Policy: Taking and Giving Away - International Monetary Fund
+  URL: https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Fiscal-Policy#:~:text=Fiscal%20policy%20that%20increases%20aggregate,to%20help%20reduce%20external%20vulnerabilities.
+  Fiscal policy that increases aggregate demand directly through an increase in government spending is typically called expansionary or “loose.” By contrast, fiscal policy is often considered contractionary or “tight” if it reduces demand via lower spending. Besides providing goods and services like public safety, highways, or primary education, fiscal policy objectives vary. In the short term, governments may focus on macroeconomic stabilization—for example, expanding spending or cutting taxes to stimulate an ailing economy, or slashing spending or raising taxes to combat rising inflation or to help reduce external vulnerabilities.
+
+  [2] What Is Contractionary Policy? Definition, Purpose, and Example - Investopedia
+  URL: https://www.investopedia.com/terms/c/contractionary-policy.asp#:~:text=Financial%20Review%20Board-,What%20Is%20a%20Contractionary%20Policy%3F,requirements%2C%20and%20selling%20government%20securities.
+  What Is a Contractionary Policy? A contractionary policy is a monetary measure to reduce government spending or the rate of monetary expansion by a central bank. It is a macroeconomic tool used to combat rising inflation. The main contractionary policies employed by the United States government include raising interest rates, increasing bank reserve requirements, and selling government securities.
+The Bottom Line. A contractionary policy is a tool used to reduce government spending or the rate of monetary expansion by a central bank to combat rising inflation. The main contractionary policies employed by the United States include raising interest rates, increasing bank reserve requirements, and selling government securities. Contractionary policies are often difficult to implement as they may also include increases in tax rates, higher rates of unemployment, and a decrease in government programs and subsidies. Federal Reserve History. "Volcker's Announcement of Anti-Inflation Measures." Federal Reserve Bank of St. Louis.
+
+  [1] 
+  URL: https://en.wikipedia.org/wiki/Monetary_policy
+  Monetary policy: Monetary policy is the policy adopted by the monetary authority of a nation to affect monetary and other financial conditions to accomplish broader objectives like high employment and price stability.
+People also search for: Inflation, Macroeconomics, Politics, Currency, Economic policy
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+These sources confirm everything except the idea of "slowing down the economy".
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: contractionary fiscal policy slow economy
+
+**Search Result**:
+  [3] Fiscal Policy: Taking and Giving Away - International Monetary Fund
+  URL: https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Fiscal-Policy
+  The desire to reduce poverty might lead a low-income country to tilt spending toward primary health care, whereas in an advanced economy, pension reforms might target looming long-term costs related to an aging population. In an oil-producing country, policymakers might aim to better align fiscal policy with broader macroeconomic developments by moderating procyclical spending—both by limiting bursts of spending when oil prices rise and by refraining from painful cuts when they drop. Response to the global crisis. The global crisis that had its roots in the 2007 meltdown in the U.S. mortgage market is a good case study in fiscal policy. The crisis hurt economies around the globe, with financial sector difficulties and flagging confidence hitting private consumption, investment, and international trade (all of which affect output, GDP). Governments responded by trying to boost activity through two channels: automatic stabilizers and fiscal stimulus—that is, new discretionary spending or tax cuts. Stabilizers go into effect as tax revenues and expenditure levels change and do not depend on specific actions by the government. They operate in relation to the business cycle. For instance, as output slows or falls, the amount of taxes collected declines because corporate profits and taxpayers' incomes fall, particularly under progressive tax structures where higher-income earners fall into higher-tax-rate brackets. Unemployment benefits and other social spending are also designed to rise during a downturn. These cyclical changes make fiscal policy automatically expansionary during downturns and contractionary during upturns. Automatic stabilizers are linked to the size of the government, and tend to be larger in advanced economies. Where stabilizers are larger, there may be less need for stimulus—tax cuts, subsidies, or public works programs—since both approaches help to soften the effects of a downturn. Indeed, during the recent crisis, countries with larger
+
+  [2] What Is Contractionary Policy? Definition, Purpose, and Example - Investopedia
+  URL: https://www.investopedia.com/terms/c/contractionary-policy.asp#:~:text=Expansionary%20Policy,moderate%20economic%20downturns%20and%20recessions.
+  Expansionary Policy. A contractionary policy attempts to slow the economy by reducing the money supply and fending off inflation. An expansionary policy is an effort that central banks use to stimulate an economy by boosting demand through monetary and fiscal stimulus. Expansionary policy is intended to prevent or moderate economic downturns and recessions.
+What Is the Main Goal of Contractionary Policy? The purpose of a contractionary policy is to slow growth to a healthy economic level, typically between 2% to 3% a year for the GDP. An economy that grows more than 3% creates negative consequences, including inflation. ... The offers that appear in this table are from partnerships from which Investopedia receives compensation. This compensation may impact how and where listings appear. Investopedia does not include all offers available in the marketplace.
+
+  [1] 
+  URL: https://sgp.fas.org/crs/misc/R45723.pdf
+  Fiscal Policy: Economic Effects
+
+The government can use contractionary fiscal policy to slow economic activity by decreasing government spending, increasing tax revenue, or a combination of the two. Decreasing government spending tends to slow economic activity as the government purchases fewer goods and services from the private sector.
+ 
+</details>
+
+Let's look at each claim.
+
+1. A contractionary fiscal policy involves higher taxes or reduced government spending. -> Supported by [investopedia.com](https://www.investopedia.com/terms/c/contractionary-policy.asp#:~:text=Financial%20Review%20Board-,What%20Is%20a%20Contractionary%20Policy%3F,requirements%2C%20and%20selling%20government%20securities.):
+> A contractionary policy is a monetary measure to reduce government spending
+
+[Investopedia](https://www.investopedia.com/terms/c/contractionary-policy.asp#:~:text=Financial%20Review%20Board-,What%20Is%20a%20Contractionary%20Policy%3F,requirements%2C%20and%20selling%20government%20securities.) also mentions higher taxes:
+> Contractionary policies are often difficult to implement as they may also include increases in tax rates, higher rates of unemployment, and a decrease in government programs and subsidies.
+
+2. A contractionary fiscal policy seeks to slow down the economy and curb inflation. -> Supported by [investopedia](https://www.investopedia.com/terms/c/contractionary-policy.asp#:~:text=Expansionary%20Policy,moderate%20economic%20downturns%20and%20recessions.):
+> A contractionary policy attempts to slow the economy by reducing the money supply and fending off inflation.
+
+Overall rating: Accurate
+
+# Example 3
+
+**User**: Fact-check this claim in the context of the following conversation.
+
+<details><summary>Conversation (Click to expand)</summary>
+User: Summarize the following passage:
+
+…The Mongol impact, assert the Eurasian historians, proved highly beneficial to the Russians. “The Tatars [Mongols] defended Russia from Europe,” sparing it from conquest by the West. After the conquest Mongols and the people of Rus [Russia] coexisted in harmony and peace. From their conquerors the Rus adopted typical Turanian [Asian] character traits: steadiness, conviction, strength, and religiosity, all of which promoted the development of the Muscovite state. The Mongols assured to Rus secure commercial and cultural relations with the Orient; they enhanced the position of the Orthodox church. In the mid-13th century Alexander Nevskii prince of Novgorod, faced with a fateful choice, wisely chose the East over the West: “Alexander saw in the
+Mongols a friendly force in a cultural sense that could assist him to preserve and consolidate Russian cultural identity from the Latin West…
+Model: According to Eurasian historians, the Mongol invasion of Russia was beneficial to the Russians. The Mongols defended Russia from Europe, and after the conquest, Mongols and Russians coexisted in harmony and peace. The Mongols also promoted the development of the Muscovite state and enhanced the position of the Orthodox church. In the mid-13th century, Alexander Nevsky, prince of Novgorod, wisely chose the East over the West because he saw the Mongols as a friendly force that could assist him to preserve and consolidate Russian cultural identity from the Latin West.
+</details>
+
+Fact-check this claim: According to Eurasian historians, the Mongol invasion of Russia was beneficial to the Russians.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: mongol invasion effect on russia
+
+**Search Result**:
+  [3] Mongol invasion of Kievan Rus' - Wikipedia
+  URL: https://en.wikipedia.org/wiki/Mongol_invasion_of_Kievan_Rus%27#:~:text=The%20destruction%20of%20cities%20and,on%20the%20history%20of%20Russia.
+  The destruction of cities and the decline in culture and economy had long-term consequences for Russia. The country was left behind in terms of economic development, and it took centuries for it to catch up with the rest of Europe. The Mongol-Tatar invasion also had a significant impact on Russia's political development, as it paved the way for the emergence of the centralized Moscow state, which gradually absorbed other principalities and became the dominant power in Russia. Overall, the invasion of Batu Khan had a profound and lasting impact on the history of Russia.
+Influence on society The maximum extent and principalities of Kievan Rus', 1220–1240. These principalities included Vladimir-Suzdal, Smolensk, Chernigov and Ryazan, the last annexed by the Duchy of Moscow in 1521. Historians have debated the long-term influence of Mongol rule on Rus' society. The Mongols have been blamed for the destruction of Kievan Rus', the breakup of the ancient Rus' nationality into three components and the introduction of the concept of "oriental despotism" into Russia. Historians also credit the Mongol regime with an important role in the development of Muscovy as a state.
+
+  [2] The Effects of the Mongol Empire on Russia - GeoHistory
+  URL: https://geohistory.today/mongol-empire-effects-russia/#:~:text=Within%20twenty%20years%2C%20Batu%20Khan,tributaries%20of%20the%20Golden%20Horde.
+  Within twenty years, Batu Khan marched from Mongolia with an army of 200,000 men. One by one, Russian principalities such as Ryazan, Moscow, Vladimir, Suzdal, and Rostov fell to the Batu and his armies. The armies looted and razed the cities, slaughtered the people, and took many as prisoners and slaves. The Mongols eventually captured, sacked, and destroyed Kiev, the symbolic center of Kievan Russia. Only outlying northwesterly principalities such as Novgorod, Pskov, and Smolensk survived the onslaught, though these cities would endure indirect subjugation and become tributaries of the Golden Horde.
+The Orthodox Church. With the initial Mongol onslaught, many churches and monasteries were looted and destroyed while countless adherents to the church and scores of clergy were killed; those who survived often were taken prisoner and enslaved (Dmytryshyn, 121). The mere shock of the force and size of the Mongol army was devastating. The distress was just as political and economic in nature as it was social and spiritual. The Mongol forces claimed that they were sent by God, and the Russians believed that the Mongols were indeed sent by God as a punishment for their sins.
+
+  [1] 
+  URL: https://scholarworks.iu.edu/journals/index.php/iusburj/article/download/19799/25876/43900#:~:text=The%20Mongols%20ruled%20Russia%20for,a%20large%20and%20expanding%20empire.
+  Mongol Influences on the Development of Moscow
+
+The Mongols ruled Russia for 240 years during the 13th to 15th centuries. One of the greatest effects of Mongol rule in Russia was the rise of Moscow as not only the preeminent city in Russia but also the central power of a large and expanding empire.
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+These sources suggest the invasion was decidedly not beneficial. Maybe there are other views among historians?
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: mongol invasion of russia historian views
+
+**Search Result**:
+  [3] Mongol invasion of Kievan Rus' - Wikipedia
+  URL: https://en.wikipedia.org/wiki/Mongol_invasion_of_Kievan_Rus%27#:~:text=Although%20Rus'%20forces%20defeated%20the,trade%20between%20east%20and%20west.
+  Although Rus' forces defeated the Golden Horde at the Battle of Kulikovo in 1380, Mongol domination of parts of Rus' territories, with the requisite demands of tribute, continued until the Great stand on the Ugra river in 1480. Historians argued that without the Mongol destruction of Kievan Rus', the Rus' would not have unified into the Tsardom of Russia and, subsequently, the Russian Empire would not have risen. Trade routes with the East went through Rus' territory, making them a center of trade between east and west.
+Influence on society The maximum extent and principalities of Kievan Rus', 1220–1240. These principalities included Vladimir-Suzdal, Smolensk, Chernigov and Ryazan, the last annexed by the Duchy of Moscow in 1521. Historians have debated the long-term influence of Mongol rule on Rus' society. The Mongols have been blamed for the destruction of Kievan Rus', the breakup of the ancient Rus' nationality into three components and the introduction of the concept of "oriental despotism" into Russia. Historians also credit the Mongol regime with an important role in the development of Muscovy as a state.
+
+  [2] Soviet Historiography on Russia and the Mongols - JSTOR
+  URL: https://www.jstor.org/stable/129604
+  chronicles, remains an essential starting point for any historian of Russo-. Tatar relations. Nasonov's general interpretation of the negative and regressive im- pact of the Mongols on Russian history has remained canonical in Soviet scholarship; it was echoed my the early editions of the fundamental col- laborative work of B. D. Grekov and A. Iu. Iakubovskii.10 The more recent views advanced by Soviet scholars have not violated the basic generalization that the Mongol conquest of Russia was a historical catastrophe which the great Russian people managed at enormous cost to overcome and overthrow. The possibility that Russia profited from the Mongol conquest by participating in international commerce across. Eurasia under Mongol auspices or that Muscovy borrowed political, military, or fiscal institutions from the Mongols is not entertained within. Soviet scholarship, and never has been. Despite this one-sided interpretation of the effects of the Mongols on. Russia, Soviet orientalists have made enormous contributions to the study of the Mongol Empire and the Golden Horde. Vladimirtsev's monograph on Mongol nomadic feudalism proved seminal.1l Fiefs of people and herds, with their attendant grazing rights, replaced. European fiefs in agricultural land as the basis of vassal relationships. Chinghis Khan was the instrument of the Mongol feudal elite, not of the. Mongol people. Once his wars had accomplished their progressive function of unifying the Mongols, they became detrimental to the Mon- gol masses by wasting their demographic resources on the altar of the greed of the Mongol aristocracy. While Chinghis' leadership skills were not denied, his success was seen not as a function of personal charisma or of the racial qualities of the Mongol "barbarians," but rather, of the socio-economic structure of Mongol society, i.e. feudalism. This. 10 B. D. Grekov and A. Iu. Iakubovskii, Zolotaia Orda i ee padenie, appeared in its earliest form in 1937 and was then reissued in
+
+  [1] 
+  URL: https://archives.history.ac.uk/history-in-focus/Migration/reviews/ryan.html#:~:text=In%20most%20cases%20both%20Russian,despotism%20(a%20view%20shared%20by
+  Muscovy and the Mongols, a history book review
+
+In most cases both Russian and non-Russian historians have seen the Mongol invasion as a disaster for Russia, one over which the Russian people heroically triumphed (at one end of the historiographical spectrum), or one which led to cultural and political backwardness and slavish oriental despotism (a view shared by
+ 
+</details>
+
+This seems false or at least disputed. From [archives.history.ac.uk](https://archives.history.ac.uk/history-in-focus/Migration/reviews/ryan.html#:~:text=In%20most%20cases%20both%20Russian,despotism%20(a%20view%20shared%20by):
+
+> In most cases both Russian and non-Russian historians have seen the Mongol invasion as a disaster for Russia, one over which the Russian people heroically triumphed (at one end of the historiographical spectrum), or one which led to cultural and political backwardness and slavish oriental despotism
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Mongol_invasion_of_Kievan_Rus%27#:~:text=Although%20Rus'%20forces%20defeated%20the,trade%20between%20east%20and%20west.):
+> The destruction of cities and the decline in culture and economy had long-term consequences for Russia. The country was left behind in terms of economic development, and it took centuries for it to catch up with the rest of Europe.
+
+Overall rating: Inaccurate
+
+# Example 4
+
+**User**: Fact-check this claim in the context of the following conversation.
+
+<details><summary>Conversation (Click to expand)</summary>
+User: Critique this and what can be improved?
+
+Fruit Jam and Jelly: What's the Difference?
+Fruit jam and jelly are both delicious ways to enjoy the flavors of fresh fruit. But what exactly is the difference between the two? And which one is better?
+
+Jam
+Jam is a spread made from crushed or puréed fruit, sugar, and pectin. Pectin is a natural thickening agent found in the cell walls of fruits and vegetables. When heated, pectin causes the liquid in the fruit to gel, creating a thick, spreadable consistency.
+
+Jam can be made from any type of fruit, but some of the most popular varieties include strawberry, raspberry, blueberry, and grape. Jam can also be flavored with spices, herbs, or other ingredients.
+
+Jelly
+Jelly is a clear, translucent spread made from fruit juice, sugar, and pectin. The fruit juice is heated and strained to remove the solids, leaving behind a concentrated liquid. Pectin is then added to the liquid, which causes it to gel.
+
+Jelly is typically made from fruits that have a high juice content, such as grapes, oranges, and lemons. It can also be flavored with spices, herbs, or other ingredients.
+
+Which one is better?
+The best fruit spread for you depends on your personal preferences. Jam is thicker and has a more pronounced fruit flavor, while jelly is lighter and has a more subtle flavor. Jelly is also more transparent than jam, making it a good choice for use as a garnish.
+
+Ultimately, the best way to decide which fruit spread you prefer is to try them both and see which one you like best.
+
+Here are some additional tips for choosing the best fruit spread:
+Look for fruit spreads that are made with real fruit and sugar. Avoid products that contain high-fructose corn syrup or other artificial sweeteners.
+Choose fruit spreads that are low in added sugar.
+Check the ingredient list for any allergens or other ingredients that you may be sensitive to.
+Store fruit spreads in a cool, dark place.
+Use fruit spreads within a few months of opening.
+Enjoy!
+Model: **Fruit Jam and Jelly: What's the Difference?**
+
+Fruit jam and jelly are both delicious ways to enjoy the flavors of fresh fruit. But what exactly is the difference between the two? And which one is better?
+
+**Jam**
+
+Jam is a spread made from crushed or puréed fruit, sugar, and pectin. Pectin is a natural thickening agent found in the cell walls of fruits and vegetables. When heated, pectin causes the liquid in the fruit to gel, creating a thick, spreadable consistency.
+
+Jam can be made from any type of fruit, but some of the most popular varieties include strawberry, raspberry, blueberry, and grape. Jam can also be flavored with spices, herbs, or other ingredients.
+
+**Jelly**
+
+Jelly is a clear, translucent spread made from fruit juice, sugar, and pectin. The fruit juice is heated and strained to remove the solids, leaving behind a concentrated liquid. Pectin is then added to the liquid, which causes it to gel.
+
+Jelly is typically made from fruits that have a high juice content, such as grapes, oranges, and lemons. It can also be flavored with spices, herbs, or other ingredients.
+
+**Which one is better?**
+
+The best fruit spread for you depends on your personal preferences. Jam is thicker and has a more pronounced fruit flavor, while jelly is lighter and has a more subtle flavor. Jelly is also more transparent than jam, making it a good choice for use as a garnish.
+
+Ultimately, the best way to decide which fruit spread you prefer is to try them both and see which one you like best.
+
+**Here are some additional tips for choosing the best fruit spread:**
+
+* Look for fruit spreads that are made with real fruit and sugar. Avoid products that contain high-fructose corn syrup or other artificial sweeteners.
+* Choose fruit spreads that are low in added sugar.
+* Check the ingredient list for any allergens or other ingredients that you may be sensitive to.
+* Store fruit spreads in a cool, dark place.
+* Use fruit spreads within a few months of opening.
+
+**Enjoy!**
+</details>
+
+Fact-check this claim: Pectin is a natural thickening agent found in the cell walls of fruits and vegetables.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: pectin
+
+**Search Result**:
+  [3] What Is Pectin? - The Spruce Eats
+  URL: https://www.thespruceeats.com/what-is-pectin-1327810#:~:text=He%20also%20leads%20culinary%20tours%20in%20San%20Francisco%20and%20Italy.&text=Pectin%20is%20a%20natural%20and,usually%20made%20from%20citrus%20rinds.
+  He also leads culinary tours in San Francisco and Italy. ... Pectin is a natural and commercially produced essential ingredient in preserves, like jellies and jams. Without pectin, jellies and jams won't gel. Pectin is a type of starch, called a heteropolysaccharide, that occurs naturally in the cell walls of fruits and vegetables and gives them structure. When combined with sugar and acid, it is what makes jams and jellies develop a semisolid texture when they cool. Some fruits, like apples and quince, and the rinds, seeds, and membranes of citrus are naturally very high in pectin. Commercial pectins are usually made from citrus rinds.
+How to Cook With Pectin. The type of pectin being used will determine how it is added to a recipe. High methoxyl pectin needs to be cooked to a high temperature (220 F) in combination with acid and sugar to form a gel, while low methoxyl pectin can be activated at room temperature. Therefore, HM pectin will be added to the hot fruit mixture early on. LM pectin is often mixed with a little sugar and added to the hot fruit later in the recipe. Liquid pectin is poured into the pot of hot fruit mixture almost at the end of cooking.
+
+  [2] Pectin - Wikipedia
+  URL: https://en.wikipedia.org/wiki/Pectin#:~:text=Pectin%20is%20an%20important%20cell,not%20contribute%20significantly%20to%20nutrition.
+  Pectin is an important cell wall polysaccharide that allows primary cell wall extension and plant growth. During fruit ripening, pectin is broken down by the enzymes pectinase and pectinesterase, in which process the fruit becomes softer as the middle lamellae break down and cells become separated from each other. A similar process of cell separation caused by the breakdown of pectin occurs in the abscission zone of the petioles of deciduous plants at leaf fall. Pectin is a natural part of the human diet, but does not contribute significantly to nutrition.
+It has been used in gentle heavy metal removal from biological systems. Pectin is also used in throat lozenges as a demulcent. In cosmetic products, pectin acts as a stabiliser. Pectin is also used in wound healing preparations and speciality medical adhesives, such as colostomy devices. Sriamornsak revealed that pectin could be used in various oral drug delivery platforms, e.g., controlled release systems, gastro-retentive systems, colon-specific delivery systems and mucoadhesive delivery systems, according to its intoxicity and low cost.
+
+  [1] 
+  URL: https://en.wikipedia.org/wiki/Pectin
+  Pectin: Medication Pectin is a heteropolysaccharide, a structural acid contained in the primary lamella, in the middle lamella, and in the cell walls of terrestrial plants. The principal, chemical component of pectin is galacturonic acid which was isolated and described by Henri Braconnot in 1825.
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+Looks like everything checks out. Just need to confirm it occurs specifically in cell walls of both fruits and vegetables.
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: pectin fruit vegetables
+
+**Search Result**:
+  [3] Summer Staple – Pectin - Center for Research on Ingredient Safety - MSU College of Agriculture and Natural Resources - Michigan State University
+  URL: https://www.canr.msu.edu/news/pectin#:~:text=Where%20can%20I%20find%20pectin,the%20food%20and%20medical%20industries.
+  Where can I find pectin? Pectin is found naturally found in plants. It exists primarily in plant cell walls and helps bind cells together. Some fruits and vegetables are more pectin-rich than others. For example, apples, carrots, oranges, grapefruits, and lemons contain more pectin than cherries, grapes, and other small berries with citrus fruits containing the most pectin. These natural sources of pectin are then processed to create the liquid and powdered pectin used in our home kitchens and by the food and medical industries.
+Why is pectin important? Pectin in fruits and vegetables helps provides necessary dietary fiber in our diets. This fiber aids in our health and digestion. It's important to note that pectin derived from fruits and used as a thickener for jams, jellies, and other foods does not provide the same dietary fiber as eating whole fruits and vegetable. Additionally, high-sugar jams and jellies should not replace a well-rounded, fiber-rich diet. Manufacturers use pectin in some cosmetics as a safe and natural thickener and binder.
+
+  [2] List of Foods High in Pectin | livestrong
+  URL: https://www.livestrong.com/article/289067-list-of-foods-high-in-pectin/#:~:text=Foods%20With%20Pectin,continues%20to%20ripen%2C%20pectin%20decreases.
+  Foods With Pectin According to the Food and Agriculture Organization of the United Nations, pectin is found in nearly all fruits and vegetables because it's found in the cell walls of all green plants. The richest sources of pectin are found in the peels of citrus fruits such as oranges, lemons, limes, grapefruit and passionfruit. The amount of naturally occurring pectin depends on the ripeness of the fruit. Fruits that have just ripened have the highest pectin content and as the fruit continues to ripen, pectin decreases.
+A September 1985 study in the Journal of the American Dietetic Association found that of apples, peaches, strawberries and oranges, oranges contained the most pectin. The same study found that of green beans, carrots, tomatoes and potatoes, carrots contained the highest amount of pectin. Other fruits high in pectin include: apples, bananas, peaches, raspberries, blackberries and apricots. Peas, green beans, sweet potatoes and tomatoes also offer a high amount of pectin.
+
+  [1] 
+  URL: https://www.masterclass.com/articles/learn-about-pectin-ingredients-uses-and-substitutes
+  Popular sources include:
+
+Apples.
+
+Citrus fruit (oranges, grapefruits, lemons, and limes all help create what's known as citrus pectin)
+
+Carrots.
+
+Apricots.
+
+Plums.
+ 
+</details>
+
+Let's verify the claims:
+
+1. Pectin is a natural thickening agent. -> Accurate. From [WebMD](https://www.webmd.com/vitamins/ai/ingredientmono-500/pectin#:~:text=Pectin%20is%20a%20soluble%20fiber,evidence%20to%20support%20these%20uses.):
+> Pectin is a soluble fiber (polysaccharide) found in fruits. It is used as a thickener in cooking and baking.
+
+2. Pectin is found in the cell walls of fruits and vegetables. -> Accurate. From [canr.msu.edu](https://www.canr.msu.edu/news/pectin#:~:text=Where%20can%20I%20find%20pectin,the%20food%20and%20medical%20industries.)
+> Pectin is found naturally found in plants. It exists primarily in plant cell walls and helps bind cells together. Some fruits and vegetables are more pectin-rich than others.
+
+Overall rating: Accurate
+
+# Example 5
+
+**User**: Fact-check this claim in the context of the following conversation.
+
+<details><summary>Conversation (Click to expand)</summary>
+User: What is the premise of the book Twilight by Stephanie Meyer?
+Model: Bella Swan, a teenage girl, moves to Forks, Washington to live with her father, Charlie, after her mother remarries. There, she meets Edward Cullen, a mysterious and attractive boy who is actually a vampire. Edward and Bella fall in love, but their relationship is complicated by the fact that Edward is forbidden from falling in love with a human.
+</details>
+
+Fact-check this claim: Bella Swan, a teenage girl, moves to Forks, Washington to live with her father, Charlie, after her mother remarries.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: Bella Swan character description Twilight
+
+**Search Result**:
+  [3] Bella Swan from Twilight | CharacTour
+  URL: https://www.charactour.com/hub/characters/view/Bella-Swan.Twilight#:~:text=Bella's%20clumsiness%20and%20outsider%20status,a%20sarcastic%20streak%20when%20provoked.
+  Bella's clumsiness and outsider status should make her more cautious, but her curiosity tends to overcome any sense of self-preservation. She thinks of it as her job to help her parents and protect her friends, even though it often ends up the other way around. While Bella is quiet, she isn't shy, and has a sarcastic streak when provoked.
+Relief that I wasn't the only newcomer here, and certainly not the most interesting by any standard.” Interests… books and music. She likes to be alone. Relationship Status… single, which is good news to the boys of her new school. Bella's more interested in Edward, though. Sadly, he doesn't seem to want to be her classmate, much less her friend. Challenge… getting close to Edward and discovering the Cullens' secrets. Fitting in at her new school isn't easy, either, and it doesn't help that Bella's father is Forks's sheriff. Personality… responsible, quiet, but determined.
+
+  [2] Bella Swan Character Analysis in Twilight | LitCharts
+  URL: https://www.litcharts.com/lit/twilight/characters/bella-swan#:~:text=The%20protagonist%20of%20the%20novel,in%20in%20Forks%20at%20all.
+  The protagonist of the novel, Bella is a 17-year-old high school junior. She's pale, with brown hair. She's very intelligent and observant, though she's physically rather uncoordinated. Bella cares deeply for those around her and wants them to be happy above all else—this is why the novel opens with Bella moving to Forks, Washington, a town she loathes, to live with Charlie so that her Mom can travel with her new husband. Bella believes she doesn't relate well to other people, so she doesn't expect to fit in in Forks at all.
+And as their relationship develops, Bella's devotion to Edward is so strong that she decides she'd like to become a vampire so they can be together forever. Bella again demonstrates her loyalty to both her blood family and the Cullens, her new chosen family, when the vampire James sets his sights on her. In an attempt to protect Edward, the Cullens, and her parents, Bella evades her protectors and is willing to let James kill her if it means keeping everyone she loves safe. Ultimately, Edward saves Bella from James's attack.
+
+  [1] 
+  URL: https://en.wikipedia.org/wiki/Bella_Swan#:~:text=Bella%20is%20described%20as%20being,chocolate%20brown%22%20and%20widely%20spaced.
+  Bella Swan - Wikipedia
+
+Bella is described as being petite, with a height of roughly 5'4", and a very translucent, pale complexion. She has thick, long, brown hair, with a wide forehead, and a widow's peak. Her eyes are described as being "chocolate brown" and widely spaced.
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: bella swan father
+
+**Search Result**:
+  [3] Charlie Swan and Renée Dwyer | Twilight Saga Wiki | Fandom
+  URL: https://twilightsaga.fandom.com/wiki/Charlie_Swan_and_Ren%C3%A9e_Dwyer
+  Charlie Swan and Renée Higginbotham Dwyer are the parents of Bella Swan, parents-in-law of Edward Cullen, and grandparents of Renesmee Cullen. ... In the end, Renée married a man named Phil Dwyer and Charlie began a relationship with Sue Clearwater. In the movies, Charlie is portrayed by Billy Burke and Renée by Sarah Clarke. ... Charlie Swan was born and raised in Forks, by his parents, Geoffrey and Helen Swan. ... Charlie grew up with Billy Black, Quil Ateara IV, and Harry Clearwater. ... Renée Higginbotham was born in Downey, California.
+Charlie Swan and Renée Dwyer | Twilight Saga Wiki | Fandom.
+
+  [2] Charlie Swan | Twilight Saga Wiki | Fandom
+  URL: https://twilightsaga.fandom.com/wiki/Charlie_Swan#:~:text=Loyalty&text=No%20matter%20which%20side%20I,Burke%20in%20the%20movie%20adaptations.
+  Loyalty. ... No matter which side I'm on, if someone kisses you without your permission, you should be able to make your feelings clear without hurting yourself. Charlie to Bella on hitting Jacob. Charlie Swan is the father of Bella Swan, the ex-husband of Renee Dwyer, the maternal grandfather of Renesmee Cullen, and the father-in-law of Edward Cullen. He is the Chief of Police in Forks, Washington. He is portrayed by Billy Burke in the movie adaptations.
+Relationships. Charlie is the father of Bella Swan, the ex-husband of Renée Dwyer, the father-in-law of Edward Cullen and the maternal grandfather of Renesmee Cullen.
+
+  [1] 
+  URL: 
+  Bella Swan / Father
+
+Charlie Swan
+ 
+</details>
+
+Let's look at each claim.
+
+1. Bella Swan, a teenage girl, moves to Forks, Washington to live with Charlie after her mother remarries. -> Supported by [litcharts](https://www.litcharts.com/lit/twilight/characters/bella-swan#:~:text=The%20protagonist%20of%20the%20novel,in%20in%20Forks%20at%20all.):
+
+> Bella is a 17-year-old high school junior.
+
+> the novel opens with Bella moving to Forks, Washington, a town she loathes, to live with Charlie so that her Mom can travel with her new husband.
+
+2. Charlie is her father -> Supported by [twilightsaga.fandom](https://twilightsaga.fandom.com/wiki/Charlie_Swan#:~:text=Loyalty&text=No%20matter%20which%20side%20I,Burke%20in%20the%20movie%20adaptations.):
+> Charlie Swan is the father of Bella Swan
+
+Overall rating: Accurate
+
+# Example 6
+
+**User**: Fact-check this: UCLA and USC merged in 2005.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: did ucla and usc merge 2005
+
+**Search Result**:
+  [3] USC, UCLA and the Big Ten: How and why the stunning move went down - Sports Illustrated
+  URL: https://www.si.com/college/2022/07/01/usc-ucla-move-big-ten-how-it-happened-college-sports
+  The Pac-12 statement expressed “surprise and disappointment.” Sources said there was a Pac-12 athletic directors meeting Wednesday, and neither UCLA nor USC tipped its hand. One Pac-12 administrator says they couldn't believe the University of California state system would allow the Bruins to bolt and leave its brethren in Berkeley behind. The Big Ten was serious enough about expansion that Warren created a group that one person described as “an expansion subcommittee” of conference administrators to explore adding teams. “Something was going to happen to combat the Texas and Oklahoma move,” one Big Ten source says. Now, the remaining Pac-12 teams are seemingly free agents. Conference media-rights deals normally lock in league members until they expire. The Pac-12's TV deal ends in 2024. If UCLA and USC didn't leave now, they were risking being in the conference under a new, potentially long-term contract. A Power 5 athletic director sums it up best: “If you don't get out ... “Do you destroy another league or merge?” an official asks. And maybe the Big Ten isn't finished expanding. Could a 16-team league be 18 or 20? A half dozen colleges—most of them from the Pac-12—have reached out to the conference with an interest in joining, a source says. Big Ten officials will review and study options, but nothing is expected soon or is imminent. So, fewer than 10 months after Oregon took down Ohio State, after the West beat the East, after two commissioners walked side by side in line, college sports continues to fracture from within. And what of the Alliance? “Well,” says a Big Ten source, “it probably ceases to exist.” Information from SI senior writer Pat Forde was used in this story. Keep up with college football all year long with fuboTV: Start a 7-day trial today! More Conference Realignment Reaction: Forde: USC, UCLA and Big Ten Get Theirs—but at What Cost? From CFP to Notre Dame, What the USC-UCLA Move Means For College Sports · Big Ten Officially
+
+  [2] Why did the Big Ten previously poach USC and UCLA from the Pac-12, and what does their addition mean for conference membership? - Quora
+  URL: https://www.quora.com/Why-did-the-Big-Ten-previously-poach-USC-and-UCLA-from-the-Pac-12-and-what-does-their-addition-mean-for-conference-membership
+  PhD from University of Southern California (Graduated 2005) · Upvoted by. Chris Oslund. , B.A. Interactive Entertainment, University of Southern California (2013) and. Paul Ackman. , MS Systems Management & Management, University of Southern California (1985)Author has 677 answers and 338.3K answer views · Updated 2y ·. Related. UCLA is significantly better than USC - Is that a true statement? My short answer: it depends. Preface my answer with three points: I graduated from USC and attended one other great public university. So I am knowledgeable but admittedly biased. USC is a private, not-for-profit university, which is very different from for-profit colleges with respect to goals, finance, and governance. USC does not receive state funding like the way UCLA does. As a result, USC has to be more entrepreneurial. My medium answer: They are worthy rivalries. Both are great Research I universities . Both are members of the prestigious Association of American Universities (AAU) , while ... Announced today, USC and UCLA will join the Big10. Very smart, as the counter to the SEC adding TX and OK. In football, we will have two super conferences, with their own NIL rules and playoffs and their own College Super Bowl. The total of 32 teams even ali... 91. Profile photo for Helenus Priam · Helenus Priam. Former Professor (1956–2016) · Author has 113 answers and 77.8K answer views · Aug 6 ·. Related. How will USC and UCLA's transition to the Big Ten impact their athletic programs? Very sad. Many of the players are from the West Coast. and when the teams played Away games, families and friends. could come watch the players in the games. Some fans would travel to the Away Games. Fewer will do so and it seems that Pac 12/10/8 will be no more. Profile photo for ANY QUES. ,ANSWER Z HERE · ANY QUES. ,ANSWER Z HERE. i like to give the solution for people ,i am happy what i do · Author has 1.2K answers and 21.7K answer views · Jun 27 ·. Related. What are your predictions for the
+
+  [1] UCLA–USC rivalry - Wikipedia
+  URL: https://en.wikipedia.org/wiki/UCLA%E2%80%93USC_rivalry
+  Many of the games of this rivalry have ultimately determined the Pac-10 Rose Bowl representative and often a chance for USC to play for the national championship. USC was forced to vacate both its wins from the 2004 and 2005 seasons due to NCAA violations.
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+The search result does not provide evidence that they merged, and this claim sounds unlikely to be true. We could show both schools still play against each other in sports games.
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: ucla usc 2022 football game score
+
+**Search Result**:
+  [3] USC Trojans vs UCLA Bruins - November 20, 2022 | FOX Sports
+  URL: https://www.foxsports.com/college-football/usc-trojans-vs-ucla-bruins-nov-19-2022-game-boxscore-37595#:~:text=NOVEMBER%2020%2C%202022-,No.,of%20a%20CFP%20b...
+  No. 7 USC holds off UCLA to secure spot in Pac-12 title game, possibly much more. Caleb Williams led No. 7 USC to a wild, 48-45 win over UCLA, clinching a spot in the Pac-12 title game and moving to the doorstep of a CFP b
+SOCIAL. ... USC defeats No. ... No. ... USC's Korey Foreman intercepts Dorian Thompson-Robinson to secure the Trojans' 48-45 win. ... USC's Caleb Williams finds Jordan Addison for the 35 yard touchdown. ... USC Trojans' Austin Jones 8 yard touchdown run cuts UCLA's lead to 21-17. ... Caleb Williams's touchdown cuts the Bruins' lead to 14-7. ... UCLA's Dorian Thompson-Robinson finds Michael Ezeike for the 30 yard touchdown to give the Bruins the 14-0 lead. ... Dorian Thompson-Robinson touchdown gives UCLA the early 7-0. ... Could USC with a 12-1 record make the College Football playoff? ... UCLA RB Zach Charbonnet's special relationship with his sister pushes him to be better.
+
+  [2] USC 48-45 UCLA (Nov 19, 2022) Final Score - ESPN
+  URL: https://www.espn.com/college-football/game/_/gameId/401404044#:~:text=USC%2048%2D45%20UCLA%20(Nov,%2C%202022)%20Final%20Score%20%2D%20ESPN
+  USC 48-45 UCLA (Nov 19, 2022) Final Score - ESPN.
+No. 7 USC outlasts No. 16 UCLA to reach Pac-12 title game. — Caleb Williams bolstered Southern California's push for a possible spot in the College Football Playoff with the biggest game of his career against the Trojans' archrival.
+
+  [1] 
+  URL: 
+  Here is the match, home side is first, away is second: UCLA Bruins football vs USC Trojans football. And here is the score: UCLA Bruins football 45 -  48 USC Trojans football More information about event: American football, NCAA Division I Football Bowl Subdivision, . It is regular season. Information about the venue: Rose Bowl Stadium, Pasadena, United States. Here is the starting time 2022-11-20T01:00:00Z. This event is done.
+ 
+</details>
+
+UCLA and USC are two separate universities. For example, they still play sports games against each other. [Fox Sports](https://www.foxsports.com/college-football/usc-trojans-vs-ucla-bruins-nov-19-2022-game-boxscore-37595):
+
+> USC Trojans vs UCLA Bruins - November 20, 2022
+
+Overall rating: Inaccurate
+
+# Example 7
+
+**User**: Fact-check this: A local area network (LAN) is a computer network that interconnects computers within a limited area such as a home, school, computer laboratory, or office building.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: what is a local area network LAN
+
+**Search Result**:
+  [3] What is a LAN (local area network)? | Cloudflare
+  URL: https://www.cloudflare.com/learning/network-layer/what-is-a-lan/#:~:text=Copy%20article%20link-,What%20is%20a%20LAN%20(local%20area%20network)%3F,metropolitan%20area%20networks%20(MAN).
+  What is a LAN (local area network)? A local area network (LAN) is a network contained within a small geographic area, usually within the same building. Home WiFi networks and small business networks are common examples of LANs. LANs can also be fairly large, although if they take up multiple buildings, it is usually more accurate to classify them as wide area networks (WAN) or metropolitan area networks (MAN).
+What is a LAN (local area network)? A LAN, or local area network, is a group of connected computing devices within a localized area that usually share a centralized Internet connection.
+
+  [2] What is a LAN? Local Area Network - Cisco
+  URL: https://www.cisco.com/c/en/us/products/switches/what-is-a-lan-local-area-network.html#:~:text=A%20local%20area%20network%20(LAN,MANs%20connect%20many%20LANs%20together.
+  A local area network (LAN) is a collection of devices connected together in one physical location, such as a building, office, or home. A LAN can be small or large, ranging from a home network with one user to an enterprise network with thousands of users and devices in an office or school. Regardless of size, a LAN's single defining characteristic is that it connects devices that are in a single, limited area. In contrast, a wide area network (WAN) or metropolitan area network (MAN) covers larger geographic areas. Some WANs and MANs connect many LANs together.
+A LAN comprises cables, access points, switches, routers, and other components that enable devices to connect to internal servers, web servers, and other LANs via wide area networks. The rise of virtualization has also fueled the development of virtual LANs, which enable network administrators to logically group network nodes and partition their networks without a need for major infrastructure changes. For example, in an office with multiple departments, such as accounting, IT support, and administration, each department's computers could be logically connected to the same switch but segmented to behave as if they are separate.
+
+  [1] 
+  URL: https://en.wikipedia.org/wiki/Local_area_network
+  Local area network: A local area network is a computer network that interconnects computers within a limited area such as a residence, school, laboratory, university campus or office building. By contrast, a wide area network not only covers a larger geographic distance, but also generally involves leased telecommunication circuits.
+ 
+</details>
+
+[Wikipedia](https://en.wikipedia.org/wiki/Local_area_network)
+
+> Local area network: A local area network is a computer network that interconnects computers within a limited area such as a residence, school, laboratory, university campus or office building.
+
+Overall rating: Accurate
+
+# Example 8
+
+**User**: Fact-check this: Nonparametric correlation does not make any assumptions about the distribution of the data or the shape of the relationship between the two variables.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: nonparametric correlation
+
+**Search Result**:
+  [3] Nonparametric Correlation Estimates - IBM
+  URL: https://www.ibm.com/docs/en/spss-statistics/25.0.0?topic=efficiency-nonparametric-correlation-estimates#:~:text=The%20Spearman's%20rho%20and%20Kendall's,Click%20OK.
+  The Spearman's rho and Kendall's tau-b statistics measure the rank-order association between two scale or ordinal variables. They work regardless of the distributions of the variables. To obtain an analysis using Spearman's rho, recall the Bivariate Correlations dialog box. Select Sales in thousands as an analysis variable. Deselect Pearson and select Spearman. Click OK.
+
+  [2] Assumptions in Nonparametric Correlations - Wiley Online Library
+  URL: https://onlinelibrary.wiley.com/doi/10.1002/9781119528388.ch6
+  Nonparametric tests are generally used where the data does not follow a normal distribution. Spearman rank-order correlation is a nonparametric statistical technique for measuring the relationship between two ordinal variables or rank-ordinal correlation.
+
+  [1] 
+  URL: https://onlinelibrary.wiley.com/doi/10.1002/9781119528388.ch6#:~:text=Nonparametric%20tests%20are%20generally%20used,variables%20or%20rank%2Dordinal%20correlation.
+  Assumptions in Nonparametric Correlations
+
+Nonparametric tests are generally used where the data does not follow a normal distribution. Spearman rank-order correlation is a nonparametric statistical technique for measuring the relationship between two ordinal variables or rank-ordinal correlation.
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+The ibm.com page looks very relevant. Let's zoom into Kendall's tau and Spearman's rho.
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: Kendall's tau assumptions
+
+**Search Result**:
+  [3] Kendall's Tau - StatsTest.com
+  URL: https://www.statstest.com/kendalls-tau/
+  Assumptions for Kendall's Tau. ... Continuous or Ordinal. The variables that you care about must be continuous or ordinal. Continuous means that the variable can take on any reasonable value. ... Monotonicity. Your two variables should have a monotonic relationship. This means that the direction of the relationship between the variables is consistent. ... Relationship. You are looking for a statistical test to look at how two variables are related. ... Continuous with Outliers or Ordinal. Your variables of interest must be either continuous or ordinal. ... Two Variables. Kendall's Tau can only be used to compare two variables.
+Every statistical method has assumptions. Assumptions mean that your data must satisfy certain properties in order for statistical method results to be accurate. The assumptions for Kendall's Tau include: Continuous or ordinal. Monotonicity.
+
+  [2] Kendall's Tau-b using SPSS Statistics - A How-To Statistical Guide by Laerd Statistics
+  URL: https://statistics.laerd.com/spss-tutorials/kendalls-tau-b-using-spss-statistics.php
+  Assumptions. ... Assumption #1: Your two variables should be measured on an ordinal or continuous scale. Examples of ordinal variables include Likert scales (e.g., a 7-point scale from strongly agree through to strongly disagree), amongst other ways of ranking categories (e.g., a 5-point scale explaining how much a customer liked a product, ranging from "Not very much" to "Yes, a lot"). ... Assumption #2: Kendall's tau-b determines whether there is a monotonic relationship between your two variables.
+Interpreting the Results for Kendall's Tau-b SPSS Statistics generates one main table for the Kendall's tau-b procedure that you ran in the previous section. If your data passed assumption #2 (i.e., there is a monotonic relationship between your two variables), which we explained earlier in the Assumptions section, you will only need to interpret this one table. However, since you should have tested your data for this assumption, you will also need to interpret the SPSS Statistics output that was produced when you tested for it (i.e., your scatterplot results).
+
+  [1] 
+  URL: https://www.statstest.com/kendalls-tau/#:~:text=Assumptions%20for%20Kendall's%20Tau&text=Assumptions%20mean%20that%20your%20data,Monotonicity
+  Kendall's Tau - StatsTest.com
+
+Assumptions for Kendall's Tau Assumptions mean that your data must satisfy certain properties in order for statistical method results to be accurate. The assumptions for Kendall's Tau include: Continuous or ordinal. Monotonicity.
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+All three sources suggest that Kendall's tau assumes that the two variables have a monotonic relationship, which contradicts the statement.
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: Spearman's rho assumptions
+
+**Search Result**:
+  [3] Spearman's Rho - StatsTest.com
+  URL: https://www.statstest.com/spearmans-rho/
+  Assumptions for Spearman's Rho. ... Continuous or Ordinal. The variables that you care about must be continuous or ordinal. Continuous means that the variable can take on any reasonable value. ... Monotonicity. Your two variables should have a monotonic relationship. This means that the direction of the relationship between the variables is consistent. ... Relationship. You are looking for a statistical test to look at how two variables are related. ... Continuous with Outliers or Ordinal. Your variable of interest must be either continuous or ordinal. ... Two Variables. Spearman's Rho can only be used to compare two variables.
+Every statistical method has assumptions. Assumptions mean that your data must satisfy certain properties in order for statistical method results to be accurate. The assumptions for Spearman's Rho include: Continuous or ordinal. Monotonicity.
+
+  [2] Spearman's Rank Order Correlation using SPSS Statistics - A How-To Statistical Guide by Laerd Statistics
+  URL: https://statistics.laerd.com/spss-tutorials/spearmans-rank-order-correlation-using-spss-statistics.php
+  Assumptions. ... Assumption #1: Your two variables should be measured on an ordinal, interval or ratio scale. Examples of ordinal variables include Likert scales (e.g., a 7-point scale from "strongly agree" through to "strongly disagree"), amongst other ways of ranking categories (e.g., a 3-pont scale explaining how much a customer liked a product, ranging from "Not very much", to "It is OK", to "Yes, a lot"). ... Assumption #2: Your two variables represent paired observations. ... Assumption #3: There is a monotonic relationship between the two variables.
+Note: Spearman's correlation determines the degree to which a relationship is monotonic. Put another way, it determines whether there is a monotonic component of association between two continuous or ordinal variables. As such, monotonicity is not actually an assumption of Spearman's correlation. However, you would not normally want to pursue a Spearman's correlation to determine the strength and direction of a monotonic relationship when you already know the relationship between your two variables is not monotonic.
+
+  [1] 
+  URL: https://statistics.laerd.com/spss-tutorials/spearmans-rank-order-correlation-using-spss-statistics.php
+  These three assumptions are:
+
+Assumption #1: Your two variables should be measured on an ordinal, interval or ratio scale.
+
+Assumption #2: Your two variables represent paired observations.
+
+Assumption #3: There is a monotonic relationship between the two variables.
+ 
+</details>
+
+Let's list the claims:
+
+1. Nonparametric correlation does not make any assumptions about the distribution of the data.
+2. Nonparametric correlation does not make any assumptions about the shape of the relationship between the two variables.
+
+Claim 2 is incorrect. Kendall's tau and Spearman's rho are common nonparametric correlation measure, but they do assume a monotonic relationship between the two variables. From [ibm.com]( https://www.ibm.com/docs/en/spss-statistics/25.0.0?topic=efficiency-nonparametric-correlation-estimates#:~:text=The%20Spearman's%20rho%20and%20Kendall's,Click%20OK):
+
+> The Spearman's rho and Kendall's tau-b statistics measure the rank-order association between two scale or ordinal variables.
+
+Kendall's tau assumes the relationship between the two variables is monotonic. From [statstest.com](https://www.statstest.com/kendalls-tau/#:~:text=Assumptions%20for%20Kendall's%20Tau&text=Assumptions%20mean%20that%20your%20data,Monotonicity):
+> The assumptions for Kendall's Tau include: Continuous or ordinal. Monotonicity.
+
+This also applies to Spearman's rho. From [statistics.laerd.com](https://statistics.laerd.com/spss-tutorials/spearmans-rank-order-correlation-using-spss-statistics.php):
+> Assumption #3: There is a monotonic relationship between the two variables.
+
+Overall rating: Inaccurate
+
+# Example 9
+
+**User**: Fact-check this and cite sources using markdown: Contractionary fiscal policy, involving higher taxes or reduced government spending, seeks to slow down the economy and curb inflation.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: contractionary fiscal policy
+
+**Search Result**:
+  [3] Fiscal Policy: Taking and Giving Away - International Monetary Fund
+  URL: https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Fiscal-Policy#:~:text=Fiscal%20policy%20that%20increases%20aggregate,to%20help%20reduce%20external%20vulnerabilities.
+  Fiscal policy that increases aggregate demand directly through an increase in government spending is typically called expansionary or “loose.” By contrast, fiscal policy is often considered contractionary or “tight” if it reduces demand via lower spending. Besides providing goods and services like public safety, highways, or primary education, fiscal policy objectives vary. In the short term, governments may focus on macroeconomic stabilization—for example, expanding spending or cutting taxes to stimulate an ailing economy, or slashing spending or raising taxes to combat rising inflation or to help reduce external vulnerabilities.
+
+  [2] What Is Contractionary Policy? Definition, Purpose, and Example - Investopedia
+  URL: https://www.investopedia.com/terms/c/contractionary-policy.asp#:~:text=Financial%20Review%20Board-,What%20Is%20a%20Contractionary%20Policy%3F,requirements%2C%20and%20selling%20government%20securities.
+  What Is a Contractionary Policy? A contractionary policy is a monetary measure to reduce government spending or the rate of monetary expansion by a central bank. It is a macroeconomic tool used to combat rising inflation. The main contractionary policies employed by the United States government include raising interest rates, increasing bank reserve requirements, and selling government securities.
+The Bottom Line. A contractionary policy is a tool used to reduce government spending or the rate of monetary expansion by a central bank to combat rising inflation. The main contractionary policies employed by the United States include raising interest rates, increasing bank reserve requirements, and selling government securities. Contractionary policies are often difficult to implement as they may also include increases in tax rates, higher rates of unemployment, and a decrease in government programs and subsidies. Federal Reserve History. "Volcker's Announcement of Anti-Inflation Measures." Federal Reserve Bank of St. Louis.
+
+  [1] 
+  URL: https://en.wikipedia.org/wiki/Monetary_policy
+  Monetary policy: Monetary policy is the policy adopted by the monetary authority of a nation to affect monetary and other financial conditions to accomplish broader objectives like high employment and price stability.
+People also search for: Inflation, Macroeconomics, Politics, Currency, Economic policy
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+These sources confirm everything except the idea of "slowing down the economy".
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: contractionary fiscal policy slow economy
+
+**Search Result**:
+  [3] Fiscal Policy: Taking and Giving Away - International Monetary Fund
+  URL: https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Fiscal-Policy
+  The desire to reduce poverty might lead a low-income country to tilt spending toward primary health care, whereas in an advanced economy, pension reforms might target looming long-term costs related to an aging population. In an oil-producing country, policymakers might aim to better align fiscal policy with broader macroeconomic developments by moderating procyclical spending—both by limiting bursts of spending when oil prices rise and by refraining from painful cuts when they drop. Response to the global crisis. The global crisis that had its roots in the 2007 meltdown in the U.S. mortgage market is a good case study in fiscal policy. The crisis hurt economies around the globe, with financial sector difficulties and flagging confidence hitting private consumption, investment, and international trade (all of which affect output, GDP). Governments responded by trying to boost activity through two channels: automatic stabilizers and fiscal stimulus—that is, new discretionary spending or tax cuts. Stabilizers go into effect as tax revenues and expenditure levels change and do not depend on specific actions by the government. They operate in relation to the business cycle. For instance, as output slows or falls, the amount of taxes collected declines because corporate profits and taxpayers' incomes fall, particularly under progressive tax structures where higher-income earners fall into higher-tax-rate brackets. Unemployment benefits and other social spending are also designed to rise during a downturn. These cyclical changes make fiscal policy automatically expansionary during downturns and contractionary during upturns. Automatic stabilizers are linked to the size of the government, and tend to be larger in advanced economies. Where stabilizers are larger, there may be less need for stimulus—tax cuts, subsidies, or public works programs—since both approaches help to soften the effects of a downturn. Indeed, during the recent crisis, countries with larger
+
+  [2] What Is Contractionary Policy? Definition, Purpose, and Example - Investopedia
+  URL: https://www.investopedia.com/terms/c/contractionary-policy.asp#:~:text=Expansionary%20Policy,moderate%20economic%20downturns%20and%20recessions.
+  Expansionary Policy. A contractionary policy attempts to slow the economy by reducing the money supply and fending off inflation. An expansionary policy is an effort that central banks use to stimulate an economy by boosting demand through monetary and fiscal stimulus. Expansionary policy is intended to prevent or moderate economic downturns and recessions.
+What Is the Main Goal of Contractionary Policy? The purpose of a contractionary policy is to slow growth to a healthy economic level, typically between 2% to 3% a year for the GDP. An economy that grows more than 3% creates negative consequences, including inflation. ... The offers that appear in this table are from partnerships from which Investopedia receives compensation. This compensation may impact how and where listings appear. Investopedia does not include all offers available in the marketplace.
+
+  [1] 
+  URL: https://sgp.fas.org/crs/misc/R45723.pdf
+  Fiscal Policy: Economic Effects
+
+The government can use contractionary fiscal policy to slow economic activity by decreasing government spending, increasing tax revenue, or a combination of the two. Decreasing government spending tends to slow economic activity as the government purchases fewer goods and services from the private sector.
+ 
+</details>
+
+Let's look at each claim.
+
+1. A contractionary fiscal policy involves higher taxes or reduced government spending. -> Supported by [investopedia.com](https://www.investopedia.com/terms/c/contractionary-policy.asp#:~:text=Financial%20Review%20Board-,What%20Is%20a%20Contractionary%20Policy%3F,requirements%2C%20and%20selling%20government%20securities.):
+> A contractionary policy is a monetary measure to reduce government spending
+
+[Investopedia](https://www.investopedia.com/terms/c/contractionary-policy.asp#:~:text=Financial%20Review%20Board-,What%20Is%20a%20Contractionary%20Policy%3F,requirements%2C%20and%20selling%20government%20securities.) also mentions higher taxes:
+> Contractionary policies are often difficult to implement as they may also include increases in tax rates, higher rates of unemployment, and a decrease in government programs and subsidies.
+
+2. A contractionary fiscal policy seeks to slow down the economy and curb inflation. -> Supported by [investopedia](https://www.investopedia.com/terms/c/contractionary-policy.asp#:~:text=Expansionary%20Policy,moderate%20economic%20downturns%20and%20recessions.):
+> A contractionary policy attempts to slow the economy by reducing the money supply and fending off inflation.
+
+Overall rating: Accurate
+
+# Example 10
+
+**User**: Fact-check this and cite sources using markdown: According to Eurasian historians, the Mongol invasion of Russia was beneficial to the Russians.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: mongol invasion effect on russia
+
+**Search Result**:
+  [3] Mongol invasion of Kievan Rus' - Wikipedia
+  URL: https://en.wikipedia.org/wiki/Mongol_invasion_of_Kievan_Rus%27#:~:text=The%20destruction%20of%20cities%20and,on%20the%20history%20of%20Russia.
+  The destruction of cities and the decline in culture and economy had long-term consequences for Russia. The country was left behind in terms of economic development, and it took centuries for it to catch up with the rest of Europe. The Mongol-Tatar invasion also had a significant impact on Russia's political development, as it paved the way for the emergence of the centralized Moscow state, which gradually absorbed other principalities and became the dominant power in Russia. Overall, the invasion of Batu Khan had a profound and lasting impact on the history of Russia.
+Influence on society The maximum extent and principalities of Kievan Rus', 1220–1240. These principalities included Vladimir-Suzdal, Smolensk, Chernigov and Ryazan, the last annexed by the Duchy of Moscow in 1521. Historians have debated the long-term influence of Mongol rule on Rus' society. The Mongols have been blamed for the destruction of Kievan Rus', the breakup of the ancient Rus' nationality into three components and the introduction of the concept of "oriental despotism" into Russia. Historians also credit the Mongol regime with an important role in the development of Muscovy as a state.
+
+  [2] The Effects of the Mongol Empire on Russia - GeoHistory
+  URL: https://geohistory.today/mongol-empire-effects-russia/#:~:text=Within%20twenty%20years%2C%20Batu%20Khan,tributaries%20of%20the%20Golden%20Horde.
+  Within twenty years, Batu Khan marched from Mongolia with an army of 200,000 men. One by one, Russian principalities such as Ryazan, Moscow, Vladimir, Suzdal, and Rostov fell to the Batu and his armies. The armies looted and razed the cities, slaughtered the people, and took many as prisoners and slaves. The Mongols eventually captured, sacked, and destroyed Kiev, the symbolic center of Kievan Russia. Only outlying northwesterly principalities such as Novgorod, Pskov, and Smolensk survived the onslaught, though these cities would endure indirect subjugation and become tributaries of the Golden Horde.
+The Orthodox Church. With the initial Mongol onslaught, many churches and monasteries were looted and destroyed while countless adherents to the church and scores of clergy were killed; those who survived often were taken prisoner and enslaved (Dmytryshyn, 121). The mere shock of the force and size of the Mongol army was devastating. The distress was just as political and economic in nature as it was social and spiritual. The Mongol forces claimed that they were sent by God, and the Russians believed that the Mongols were indeed sent by God as a punishment for their sins.
+
+  [1] 
+  URL: https://scholarworks.iu.edu/journals/index.php/iusburj/article/download/19799/25876/43900#:~:text=The%20Mongols%20ruled%20Russia%20for,a%20large%20and%20expanding%20empire.
+  Mongol Influences on the Development of Moscow
+
+The Mongols ruled Russia for 240 years during the 13th to 15th centuries. One of the greatest effects of Mongol rule in Russia was the rise of Moscow as not only the preeminent city in Russia but also the central power of a large and expanding empire.
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+These sources suggest the invasion was decidedly not beneficial. Maybe there are other views among historians?
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: mongol invasion of russia historian views
+
+**Search Result**:
+  [3] Mongol invasion of Kievan Rus' - Wikipedia
+  URL: https://en.wikipedia.org/wiki/Mongol_invasion_of_Kievan_Rus%27#:~:text=Although%20Rus'%20forces%20defeated%20the,trade%20between%20east%20and%20west.
+  Although Rus' forces defeated the Golden Horde at the Battle of Kulikovo in 1380, Mongol domination of parts of Rus' territories, with the requisite demands of tribute, continued until the Great stand on the Ugra river in 1480. Historians argued that without the Mongol destruction of Kievan Rus', the Rus' would not have unified into the Tsardom of Russia and, subsequently, the Russian Empire would not have risen. Trade routes with the East went through Rus' territory, making them a center of trade between east and west.
+Influence on society The maximum extent and principalities of Kievan Rus', 1220–1240. These principalities included Vladimir-Suzdal, Smolensk, Chernigov and Ryazan, the last annexed by the Duchy of Moscow in 1521. Historians have debated the long-term influence of Mongol rule on Rus' society. The Mongols have been blamed for the destruction of Kievan Rus', the breakup of the ancient Rus' nationality into three components and the introduction of the concept of "oriental despotism" into Russia. Historians also credit the Mongol regime with an important role in the development of Muscovy as a state.
+
+  [2] Soviet Historiography on Russia and the Mongols - JSTOR
+  URL: https://www.jstor.org/stable/129604
+  chronicles, remains an essential starting point for any historian of Russo-. Tatar relations. Nasonov's general interpretation of the negative and regressive im- pact of the Mongols on Russian history has remained canonical in Soviet scholarship; it was echoed my the early editions of the fundamental col- laborative work of B. D. Grekov and A. Iu. Iakubovskii.10 The more recent views advanced by Soviet scholars have not violated the basic generalization that the Mongol conquest of Russia was a historical catastrophe which the great Russian people managed at enormous cost to overcome and overthrow. The possibility that Russia profited from the Mongol conquest by participating in international commerce across. Eurasia under Mongol auspices or that Muscovy borrowed political, military, or fiscal institutions from the Mongols is not entertained within. Soviet scholarship, and never has been. Despite this one-sided interpretation of the effects of the Mongols on. Russia, Soviet orientalists have made enormous contributions to the study of the Mongol Empire and the Golden Horde. Vladimirtsev's monograph on Mongol nomadic feudalism proved seminal.1l Fiefs of people and herds, with their attendant grazing rights, replaced. European fiefs in agricultural land as the basis of vassal relationships. Chinghis Khan was the instrument of the Mongol feudal elite, not of the. Mongol people. Once his wars had accomplished their progressive function of unifying the Mongols, they became detrimental to the Mon- gol masses by wasting their demographic resources on the altar of the greed of the Mongol aristocracy. While Chinghis' leadership skills were not denied, his success was seen not as a function of personal charisma or of the racial qualities of the Mongol "barbarians," but rather, of the socio-economic structure of Mongol society, i.e. feudalism. This. 10 B. D. Grekov and A. Iu. Iakubovskii, Zolotaia Orda i ee padenie, appeared in its earliest form in 1937 and was then reissued in
+
+  [1] 
+  URL: https://archives.history.ac.uk/history-in-focus/Migration/reviews/ryan.html#:~:text=In%20most%20cases%20both%20Russian,despotism%20(a%20view%20shared%20by
+  Muscovy and the Mongols, a history book review
+
+In most cases both Russian and non-Russian historians have seen the Mongol invasion as a disaster for Russia, one over which the Russian people heroically triumphed (at one end of the historiographical spectrum), or one which led to cultural and political backwardness and slavish oriental despotism (a view shared by
+ 
+</details>
+
+This seems false or at least disputed. From [archives.history.ac.uk](https://archives.history.ac.uk/history-in-focus/Migration/reviews/ryan.html#:~:text=In%20most%20cases%20both%20Russian,despotism%20(a%20view%20shared%20by):
+
+> In most cases both Russian and non-Russian historians have seen the Mongol invasion as a disaster for Russia, one over which the Russian people heroically triumphed (at one end of the historiographical spectrum), or one which led to cultural and political backwardness and slavish oriental despotism
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Mongol_invasion_of_Kievan_Rus%27#:~:text=Although%20Rus'%20forces%20defeated%20the,trade%20between%20east%20and%20west.):
+> The destruction of cities and the decline in culture and economy had long-term consequences for Russia. The country was left behind in terms of economic development, and it took centuries for it to catch up with the rest of Europe.
+
+Overall rating: Inaccurate
+
+# Example 11
+
+**User**: Fact-check this and cite sources using markdown: Pectin is a natural thickening agent found in the cell walls of fruits and vegetables.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: pectin
+
+**Search Result**:
+  [3] What Is Pectin? - The Spruce Eats
+  URL: https://www.thespruceeats.com/what-is-pectin-1327810#:~:text=He%20also%20leads%20culinary%20tours%20in%20San%20Francisco%20and%20Italy.&text=Pectin%20is%20a%20natural%20and,usually%20made%20from%20citrus%20rinds.
+  He also leads culinary tours in San Francisco and Italy. ... Pectin is a natural and commercially produced essential ingredient in preserves, like jellies and jams. Without pectin, jellies and jams won't gel. Pectin is a type of starch, called a heteropolysaccharide, that occurs naturally in the cell walls of fruits and vegetables and gives them structure. When combined with sugar and acid, it is what makes jams and jellies develop a semisolid texture when they cool. Some fruits, like apples and quince, and the rinds, seeds, and membranes of citrus are naturally very high in pectin. Commercial pectins are usually made from citrus rinds.
+How to Cook With Pectin. The type of pectin being used will determine how it is added to a recipe. High methoxyl pectin needs to be cooked to a high temperature (220 F) in combination with acid and sugar to form a gel, while low methoxyl pectin can be activated at room temperature. Therefore, HM pectin will be added to the hot fruit mixture early on. LM pectin is often mixed with a little sugar and added to the hot fruit later in the recipe. Liquid pectin is poured into the pot of hot fruit mixture almost at the end of cooking.
+
+  [2] Pectin - Wikipedia
+  URL: https://en.wikipedia.org/wiki/Pectin#:~:text=Pectin%20is%20an%20important%20cell,not%20contribute%20significantly%20to%20nutrition.
+  Pectin is an important cell wall polysaccharide that allows primary cell wall extension and plant growth. During fruit ripening, pectin is broken down by the enzymes pectinase and pectinesterase, in which process the fruit becomes softer as the middle lamellae break down and cells become separated from each other. A similar process of cell separation caused by the breakdown of pectin occurs in the abscission zone of the petioles of deciduous plants at leaf fall. Pectin is a natural part of the human diet, but does not contribute significantly to nutrition.
+It has been used in gentle heavy metal removal from biological systems. Pectin is also used in throat lozenges as a demulcent. In cosmetic products, pectin acts as a stabiliser. Pectin is also used in wound healing preparations and speciality medical adhesives, such as colostomy devices. Sriamornsak revealed that pectin could be used in various oral drug delivery platforms, e.g., controlled release systems, gastro-retentive systems, colon-specific delivery systems and mucoadhesive delivery systems, according to its intoxicity and low cost.
+
+  [1] 
+  URL: https://en.wikipedia.org/wiki/Pectin
+  Pectin: Medication Pectin is a heteropolysaccharide, a structural acid contained in the primary lamella, in the middle lamella, and in the cell walls of terrestrial plants. The principal, chemical component of pectin is galacturonic acid which was isolated and described by Henri Braconnot in 1825.
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+Looks like everything checks out. Just need to confirm it occurs specifically in cell walls of both fruits and vegetables.
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: pectin fruit vegetables
+
+**Search Result**:
+  [3] Summer Staple – Pectin - Center for Research on Ingredient Safety - MSU College of Agriculture and Natural Resources - Michigan State University
+  URL: https://www.canr.msu.edu/news/pectin#:~:text=Where%20can%20I%20find%20pectin,the%20food%20and%20medical%20industries.
+  Where can I find pectin? Pectin is found naturally found in plants. It exists primarily in plant cell walls and helps bind cells together. Some fruits and vegetables are more pectin-rich than others. For example, apples, carrots, oranges, grapefruits, and lemons contain more pectin than cherries, grapes, and other small berries with citrus fruits containing the most pectin. These natural sources of pectin are then processed to create the liquid and powdered pectin used in our home kitchens and by the food and medical industries.
+Why is pectin important? Pectin in fruits and vegetables helps provides necessary dietary fiber in our diets. This fiber aids in our health and digestion. It's important to note that pectin derived from fruits and used as a thickener for jams, jellies, and other foods does not provide the same dietary fiber as eating whole fruits and vegetable. Additionally, high-sugar jams and jellies should not replace a well-rounded, fiber-rich diet. Manufacturers use pectin in some cosmetics as a safe and natural thickener and binder.
+
+  [2] List of Foods High in Pectin | livestrong
+  URL: https://www.livestrong.com/article/289067-list-of-foods-high-in-pectin/#:~:text=Foods%20With%20Pectin,continues%20to%20ripen%2C%20pectin%20decreases.
+  Foods With Pectin According to the Food and Agriculture Organization of the United Nations, pectin is found in nearly all fruits and vegetables because it's found in the cell walls of all green plants. The richest sources of pectin are found in the peels of citrus fruits such as oranges, lemons, limes, grapefruit and passionfruit. The amount of naturally occurring pectin depends on the ripeness of the fruit. Fruits that have just ripened have the highest pectin content and as the fruit continues to ripen, pectin decreases.
+A September 1985 study in the Journal of the American Dietetic Association found that of apples, peaches, strawberries and oranges, oranges contained the most pectin. The same study found that of green beans, carrots, tomatoes and potatoes, carrots contained the highest amount of pectin. Other fruits high in pectin include: apples, bananas, peaches, raspberries, blackberries and apricots. Peas, green beans, sweet potatoes and tomatoes also offer a high amount of pectin.
+
+  [1] 
+  URL: https://www.masterclass.com/articles/learn-about-pectin-ingredients-uses-and-substitutes
+  Popular sources include:
+
+Apples.
+
+Citrus fruit (oranges, grapefruits, lemons, and limes all help create what's known as citrus pectin)
+
+Carrots.
+
+Apricots.
+
+Plums.
+ 
+</details>
+
+Let's verify the claims:
+
+1. Pectin is a natural thickening agent. -> Accurate. From [WebMD](https://www.webmd.com/vitamins/ai/ingredientmono-500/pectin#:~:text=Pectin%20is%20a%20soluble%20fiber,evidence%20to%20support%20these%20uses.):
+> Pectin is a soluble fiber (polysaccharide) found in fruits. It is used as a thickener in cooking and baking.
+
+2. Pectin is found in the cell walls of fruits and vegetables. -> Accurate. From [canr.msu.edu](https://www.canr.msu.edu/news/pectin#:~:text=Where%20can%20I%20find%20pectin,the%20food%20and%20medical%20industries.)
+> Pectin is found naturally found in plants. It exists primarily in plant cell walls and helps bind cells together. Some fruits and vegetables are more pectin-rich than others.
+
+Overall rating: Accurate
+
+# Example 12
+
+**User**: Fact-check this and cite sources using Markdown: Bella Swan, a teenage girl, moves to Forks, Washington to live with her father, Charlie, after her mother remarries.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: Bella Swan character description Twilight
+
+**Search Result**:
+  [3] Bella Swan from Twilight | CharacTour
+  URL: https://www.charactour.com/hub/characters/view/Bella-Swan.Twilight#:~:text=Bella's%20clumsiness%20and%20outsider%20status,a%20sarcastic%20streak%20when%20provoked.
+  Bella's clumsiness and outsider status should make her more cautious, but her curiosity tends to overcome any sense of self-preservation. She thinks of it as her job to help her parents and protect her friends, even though it often ends up the other way around. While Bella is quiet, she isn't shy, and has a sarcastic streak when provoked.
+Relief that I wasn't the only newcomer here, and certainly not the most interesting by any standard.” Interests… books and music. She likes to be alone. Relationship Status… single, which is good news to the boys of her new school. Bella's more interested in Edward, though. Sadly, he doesn't seem to want to be her classmate, much less her friend. Challenge… getting close to Edward and discovering the Cullens' secrets. Fitting in at her new school isn't easy, either, and it doesn't help that Bella's father is Forks's sheriff. Personality… responsible, quiet, but determined.
+
+  [2] Bella Swan Character Analysis in Twilight | LitCharts
+  URL: https://www.litcharts.com/lit/twilight/characters/bella-swan#:~:text=The%20protagonist%20of%20the%20novel,in%20in%20Forks%20at%20all.
+  The protagonist of the novel, Bella is a 17-year-old high school junior. She's pale, with brown hair. She's very intelligent and observant, though she's physically rather uncoordinated. Bella cares deeply for those around her and wants them to be happy above all else—this is why the novel opens with Bella moving to Forks, Washington, a town she loathes, to live with Charlie so that her Mom can travel with her new husband. Bella believes she doesn't relate well to other people, so she doesn't expect to fit in in Forks at all.
+And as their relationship develops, Bella's devotion to Edward is so strong that she decides she'd like to become a vampire so they can be together forever. Bella again demonstrates her loyalty to both her blood family and the Cullens, her new chosen family, when the vampire James sets his sights on her. In an attempt to protect Edward, the Cullens, and her parents, Bella evades her protectors and is willing to let James kill her if it means keeping everyone she loves safe. Ultimately, Edward saves Bella from James's attack.
+
+  [1] 
+  URL: https://en.wikipedia.org/wiki/Bella_Swan#:~:text=Bella%20is%20described%20as%20being,chocolate%20brown%22%20and%20widely%20spaced.
+  Bella Swan - Wikipedia
+
+Bella is described as being petite, with a height of roughly 5'4", and a very translucent, pale complexion. She has thick, long, brown hair, with a wide forehead, and a widow's peak. Her eyes are described as being "chocolate brown" and widely spaced.
+ 
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: bella swan father
+
+**Search Result**:
+  [3] Charlie Swan and Renée Dwyer | Twilight Saga Wiki | Fandom
+  URL: https://twilightsaga.fandom.com/wiki/Charlie_Swan_and_Ren%C3%A9e_Dwyer
+  Charlie Swan and Renée Higginbotham Dwyer are the parents of Bella Swan, parents-in-law of Edward Cullen, and grandparents of Renesmee Cullen. ... In the end, Renée married a man named Phil Dwyer and Charlie began a relationship with Sue Clearwater. In the movies, Charlie is portrayed by Billy Burke and Renée by Sarah Clarke. ... Charlie Swan was born and raised in Forks, by his parents, Geoffrey and Helen Swan. ... Charlie grew up with Billy Black, Quil Ateara IV, and Harry Clearwater. ... Renée Higginbotham was born in Downey, California.
+Charlie Swan and Renée Dwyer | Twilight Saga Wiki | Fandom.
+
+  [2] Charlie Swan | Twilight Saga Wiki | Fandom
+  URL: https://twilightsaga.fandom.com/wiki/Charlie_Swan#:~:text=Loyalty&text=No%20matter%20which%20side%20I,Burke%20in%20the%20movie%20adaptations.
+  Loyalty. ... No matter which side I'm on, if someone kisses you without your permission, you should be able to make your feelings clear without hurting yourself. Charlie to Bella on hitting Jacob. Charlie Swan is the father of Bella Swan, the ex-husband of Renee Dwyer, the maternal grandfather of Renesmee Cullen, and the father-in-law of Edward Cullen. He is the Chief of Police in Forks, Washington. He is portrayed by Billy Burke in the movie adaptations.
+Relationships. Charlie is the father of Bella Swan, the ex-husband of Renée Dwyer, the father-in-law of Edward Cullen and the maternal grandfather of Renesmee Cullen.
+
+  [1] 
+  URL: 
+  Bella Swan / Father
+
+Charlie Swan
+ 
+</details>
+
+Let's look at each claim.
+
+1. Bella Swan, a teenage girl, moves to Forks, Washington to live with Charlie after her mother remarries. -> Supported by [litcharts](https://www.litcharts.com/lit/twilight/characters/bella-swan#:~:text=The%20protagonist%20of%20the%20novel,in%20in%20Forks%20at%20all.):
+
+> Bella is a 17-year-old high school junior.
+
+> the novel opens with Bella moving to Forks, Washington, a town she loathes, to live with Charlie so that her Mom can travel with her new husband.
+
+2. Charlie is her father -> Supported by [twilightsaga.fandom](https://twilightsaga.fandom.com/wiki/Charlie_Swan#:~:text=Loyalty&text=No%20matter%20which%20side%20I,Burke%20in%20the%20movie%20adaptations.):
+> Charlie Swan is the father of Bella Swan
+
+Overall rating: Accurate
+
+`;
+
+// Convert Markdown to HTML and display it in the 'content' div
+document.getElementById("content").innerHTML = formatted(markdownString);
+</script>
+
+</body>
+</html>
