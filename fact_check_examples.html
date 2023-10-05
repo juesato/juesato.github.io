@@ -940,6 +940,134 @@ The evidence seems to suggest that getting below 7 hours is linked to poor
 
 Factuality verdict: Disputed
 
+
+# Example 13
+
+**User**: Fact-check the claim at the bottom, in the context of this conversation:
+
+Conversation
+**User**: What was the name of the last Atlantic hurricane in 2021?
+
+**Assistant**:
+The last Atlantic hurricane in 2021 was Wanda. It was a Category 4 hurricane that formed on November 28 and dissipated on December 6. It did not make landfall and caused no damage.
+
+
+Fact-check this claim: It did not make landfall and caused no damage.
+
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: 
+\`\`\`TOOL_CALL
+print_search(google_search.search("Hurricane Wanda"), urls=True, topk=3)
+
+\`\`\`
+
+
+**Search Result**:
+
+\`\`\`TOOL_RESULT
+[1] [Link](https://en.wikipedia.org/wiki/October_2021_nor'easter)
+October 2021 nor'easter: Tropical cyclone The October 2021 nor'easter, which eventually became Tropical Storm Wanda, was an erratic nor'easter and tropical cyclone that struck the East Coast of the United States, and meandered across the northern Atlantic Ocean in early November 2021.
+Fatalities: ≥2
+Dates: Oct 23, 2021 – Nov 8, 2021
+Power outages: >617,000
+Affected areas: Northeastern United States, Mid-Atlantic, Southern United States
+Location: East Coast of the United States, Northeastern United States, Mid-Atlantic, Azores, Bermuda
+
+[2] [Tropical Storm Wanda - National Hurricane Center](https://www.nhc.noaa.gov/data/tcr/AL212021_Wanda.pdf)
+NASA/TERRA MODERATE RESOLUTION IMAGING SPECTRORADIOMETER (MODIS) IMAGERY OF SUBTROPICAL STORM WANDA AT PEAK INTENSITY AROUND 1313 UTC 31 OCTOBER 2021. IMAGE COURTESY NASA EOSDIS WORLDVIEW. Wanda originated from a powerful nor'easter that brought hurricane-force wind gusts, heavy rainfall, and flooding to portions of New England in late October. The system became a subtropical cyclone a few days after moving away from the United States and underwent tropical transition while it meandered over the open waters of the north Atlantic Ocean. ... Wanda's origins were non-tropical.
+Wanda degenerated to a 35-kt post-tropical cyclone by 1200 UTC that day, when it was located about 375 n mi west-northwest of the Azores. The post-tropical cyclone accelerated northeastward ahead of an approaching frontal system, and it merged with the front and dissipated over the northeastern Atlantic Ocean shortly after 0000 UTC 8 November. ... Observations in Wanda (Figs.
+
+[3] [List of storms named Wanda - Wikipedia](https://en.wikipedia.org/wiki/List_of_storms_named_Wanda)
+In the Western Pacific: Tropical Storm Wanda (1945) (T4520) Typhoon Wanda (1951) (T5121) Typhoon Wanda (1956) (T5612, 08W), a destructive typhoon that made landfall in eastern China near Zhoushan, Zhejiang. Typhoon Wanda (1962) (T6259), Category 2 typhoon that made landfall in Hong Kong. Typhoon Wanda (1965) (T6508, 06W) Typhoon Wanda (1967) (T6730, 26W) Typhoon Wanda (1971) (T7104, 04W, Diding) Tropical Storm Wanda (1974) (T7401, 01W, Atang) Tropical Storm Wanda (1977) (T7706, 08W)
+The name Wanda has been used for eleven tropical cyclones worldwide. In the Atlantic: Tropical Storm Wanda (2021), a weak storm that meandered in the open Atlantic; developed from an extratropical nor'easter that affected much of the Northeastern United States.
+
+\`\`\`
+
+</details>
+
+<details style="background-color: lightgray;"><summary>Chain-of-Thought</summary>
+
+Evidence seems to indicate it did make landfall as a "nor'easter", but before it became a tropical cyclone. Let's see if we can clarify with a further search.
+</details>
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: 
+\`\`\`TOOL_CALL
+print_search(google_search.search("Did tropical cyclone Wanda make landfall in 2021?"), urls=True, topk=3)
+
+\`\`\`
+
+
+**Search Result**:
+
+\`\`\`TOOL_RESULT
+[1] [2021 Atlantic hurricane season - Wikipedia](https://en.wikipedia.org/wiki/2021_Atlantic_hurricane_season#:~:text=For%20the%20first%20time%20since,the%202021%20Atlantic%20hurricane%20season.)
+For the first time since 2006 and only the second time during the hyperactive era which began in 1995, no named storms developed between October 6 and October 30. Finally, Subtropical Storm Wanda formed in the central North Atlantic on October 30 and transitioned into a fully tropical storm on November 1. This system was the same storm that previously had brought rain and damaging wind gusts to southern New England as a potent nor'easter. Wanda remained a tropical cyclone until transitioning into an extratropical low on November 7, which marked the conclusion of activity during the 2021 Atlantic hurricane season.
+
+[2] [Tropical Storm Wanda is gone: Is it safe to say the 2021 hurricane season is over? - al.com](https://www.al.com/hurricane/2021/11/tropical-storm-wanda-is-gone-is-it-safe-to-say-the-2021-hurricane-season-is-over.html#:~:text=There%20have%20been%2021%20named,30.&text=Tropical%20Storm%20Wanda%20is%20no,from%20the%20World%20Meteorological%20Organization.)
+There have been 21 named storms during the 2021 hurricane season, which officially runs until Nov. 30. ... Tropical Storm Wanda is no more. Wanda, which formed in the north-central Atlantic on late on Oct. 30 and never threatened land, was ruled a post-tropical system on Sunday and taken off the hurricane tracking board by the National Hurricane Center. Wanda was the 21st named storm this year -- and the last name on the 2021 storm name list. If there are any additional storms they will be named from a supplemental list from the World Meteorological Organization.
+World Meteorological Organization also retires several names from the 2019 and 2020 storm lists. In the past the supplemental list relied on Greek letters of the alphabet (remember Hurricane Zeta in 2020?), but this year's list is different and uses more common names, starting with Adria and ending with Will. Wanda could be the last storm of the 2021 season the the Atlantic. Or could it? The hurricane center has added a new area to watch to the board as of Monday morning.
+
+[3] [Tropical Storm Wanda - National Hurricane Center](https://www.nhc.noaa.gov/data/tcr/AL212021_Wanda.pdf)
+NASA/TERRA MODERATE RESOLUTION IMAGING SPECTRORADIOMETER (MODIS) IMAGERY OF SUBTROPICAL STORM WANDA AT PEAK INTENSITY AROUND 1313 UTC 31 OCTOBER 2021. IMAGE COURTESY NASA EOSDIS WORLDVIEW. Wanda originated from a powerful nor'easter that brought hurricane-force wind gusts, heavy rainfall, and flooding to portions of New England in late October. The system became a subtropical cyclone a few days after moving away from the United States and underwent tropical transition while it meandered over the open waters of the north Atlantic Ocean. ... Wanda's origins were non-tropical.
+
+\`\`\`
+
+</details>
+
+## Report
+
+According to [Wikipedia](https://en.wikipedia.org/wiki/October_2021_nor'easter), Wanda did strike land, although it did so before it was named Wanda:
+
+> The October 2021 nor'easter, which eventually became Tropical Storm Wanda, was an erratic nor'easter and tropical cyclone that struck the East Coast of the United States
+
+It also caused flooding. [National Hurricane Center](https://www.nhc.noaa.gov/data/tcr/AL212021_Wanda.pdf)
+> Wanda originated from a powerful nor'easter that brought hurricane-force wind gusts, heavy rainfall, and flooding to portions of New England
+
+While arguably correct (it struck land *before* being named Wanda), this claim seems inaccurate on the whole.
+
+Factuality verdict: Inaccurate
+
+# Example 14
+
+**User**: Fact-check this and cite sources using Markdown: Neil Gosling spent July 23, 2022, sailing down the River Thames.
+
+**Assistant**
+
+<details style="background-color: lightgray;"><summary>Search Tool</summary>
+
+**Search Query**: 
+\`\`\`TOOL_CALL
+print_search(google_search.search("Neil Gosling July 23, 2022 River Thames"), urls=True, topk=3)
+
+\`\`\`
+
+
+**Search Result**:
+
+\`\`\`TOOL_RESULT
+
+
+\`\`\`
+
+</details>
+
+## Report
+
+No source was found for this claim, and it is likely to be a model hallucination. &lt;no_quotes&gt;
+
+Overall rating: Inaccurate
+
+<div style="background-color: lightblue">
+<h2>Comments on this example</h2>
+
+This is a good example where &lt;no_quotes&gt; is appropriate (though it would be better to do a few extra searches first to make sure it really is a hallucination). When the language model hallucinates a fact, we will not be able to find a relevant quote online.
+</div>
 `];
 markdownStrings.forEach((markdownString) => {
     const div = document.createElement('div');
