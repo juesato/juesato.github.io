@@ -85,7 +85,7 @@ A LAN comprises cables, access points, switches, routers, and other components t
 
 > Local area network: A local area network is a computer network that interconnects computers within a limited area such as a residence, school, laboratory, university campus or office building.
 
-Overall rating: Accurate
+Factuality verdict: Accurate
 
 <div style="background-color: lightblue">
 <h2>Comments on this example</h2>
@@ -195,7 +195,7 @@ Let's verify the claims.
 2. Pectin is found in the cell walls of fruits and vegetables. -> Accurate. From [canr.msu.edu](https://www.canr.msu.edu/news/pectin#:~:text=Where%20can%20I%20find%20pectin,the%20food%20and%20medical%20industries.)
 > It exists primarily in plant cell walls and helps bind cells together. Some fruits and vegetables are more pectin-rich than others.
 
-Overall rating: Accurate
+Factuality verdict: Accurate
 
 # Example 2
 
@@ -258,7 +258,7 @@ Let's look at each claim.
 2. Charlie is her father -> Supported by [twilightsaga.fandom](https://twilightsaga.fandom.com/wiki/Charlie_Swan#:~:text=Loyalty&text=No%20matter%20which%20side%20I,Burke%20in%20the%20movie%20adaptations.):
 > Charlie Swan is the father of Bella Swan
 
-Overall rating: Accurate
+Factuality verdict: Accurate
 
 # Example 3
 
@@ -291,7 +291,7 @@ What is a LAN (local area network)? A LAN, or local area network, is a group of 
 
 > Local area network: A local area network is a computer network that interconnects computers within a limited area such as a residence, school, laboratory, university campus or office building.
 
-Overall rating: Accurate
+Factuality verdict: Accurate
 
 # Example 4
 
@@ -340,7 +340,7 @@ UCLA and USC are two separate universities. For example, they still play sports 
 
 > USC Trojans vs UCLA Bruins - November 20, 2022
 
-Overall rating: Inaccurate
+Factuality verdict: Inaccurate
 
 # Example 5
 
@@ -434,7 +434,13 @@ From an article on Kendall's tau:
 From an article on Spearman's rho:
 > Assumption #3: There is a monotonic relationship between the two variables.
 
-Overall rating: Inaccurate
+Factuality verdict: Inaccurate
+
+<div style="background-color: lightblue">
+<h2>Comments on this example</h2>
+
+On the whole, this is a good example. However, it would be better to include Markdown links to the original URLs. This makes it easier for raters to see the full page, if they want to understand the quote in context.
+</div>
 
 # Example 6
 
@@ -494,7 +500,12 @@ The desire to reduce poverty might lead a low-income country to tilt spending to
 
 > Contractionary policies are often difficult to implement as they may also include increases in tax rates, higher rates of unemployment, and a decrease in government programs and subsidies.
 
-Overall rating: Accurate
+Factuality verdict: Accurate
+
+<div style="background-color: #ffcccb">
+<h2>Comments on this example</h2>
+This report makes it hard to see the specific relationships between the evidence and the original claim. This report could be improved by breaking the original claim into subclaims, and listing the evidence for each subclaims. It could also be improved by linking to the original pages.
+</div>
 
 # Example 7
 
@@ -641,7 +652,14 @@ president, so the claim as stated is Inaccurate.
 According to the [List of presidents of the Czech Republic - Wikipedia](https://en.wikipedia.org/wiki/List_of_presidents_of_the_Czech_Republic#:~:text=The%20Czech%20Republic%20is%20a,is%20elected%20by%20popular%20vote.)
 the current president is Petr Pavel.
 
-Overall rating: Inaccurate
+Factuality verdict: Inaccurate
+
+<div style="background-color: #ffcccb">
+<h2>Comments on this example</h2>
+
+The second quote "the current president is Petr Pavel." does not have proper Markdown formatting. This random line breaks are also not desirable. The content is good.
+
+</div>
 
 # Example 9
 
@@ -688,7 +706,14 @@ So this claim is only true in reference to the Northern Hemisphere.
 Since the claim is dependent on geographical location the factuality of this
 claim is disputed.
 
-Overall rating: Disputed
+Factuality verdict: Disputed
+
+
+<div style="background-color: lightblue">
+<h2>Comments on this example</h2>
+
+This is a good example of fact-checking a claim where the verdict is "Disputed".
+</div>
 
 # Example 10
 
@@ -776,7 +801,8 @@ This implies that it is illegal in all other countries.
 The claim is disputed, since the legality depends on geographical location and
 legal jurisdiction.
 
-Overall rating: Disputed
+Factuality verdict: Disputed
+
 
 # Example 11
 
@@ -863,7 +889,7 @@ Although all sources seem to agree that there is a correlation between red wine
 and heart health, there seems to be disagreement over whether it is a causal
 link or not, which would be necessary to support the claim.
 
-Overall rating: Disputed
+Factuality verdict: Disputed
 
 # Example 12
 
@@ -912,7 +938,7 @@ However other sources seem to recommend 7 hours, such as [How many hours of slee
 The evidence seems to suggest that getting below 7 hours is linked to poor
  health, whereas another source recommends 7 - 9 hours, so this is disputed.
 
-Overall rating: Disputed
+Factuality verdict: Disputed
 
 `];
 markdownStrings.forEach((markdownString) => {
